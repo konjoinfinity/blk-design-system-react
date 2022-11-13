@@ -35,7 +35,12 @@ export default function Footer() {
       <Container>
         <Row>
           <Col md="3">
-            <h1 className="title">BLK•</h1>
+          <img style={{height: "7vh", boxShadow: "0px 2px 5px 2px rgba(0, 0, 0, 0.1)",
+  backgroundColor: "#fff",
+  borderRadius: "20%",
+  width: "7vh",
+  padding: "1vh",
+  margin: "0.5vh"}} src={require("./reauty-logo.png")} alt="test" />
           </Col>
           <Col md="3">
             <Nav>

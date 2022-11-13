@@ -16,8 +16,6 @@
 
 */
 import React from "react";
-// react plugin used to create charts
-import { Line } from "react-chartjs-2";
 // reactstrap components
 import {
   Button,
@@ -26,8 +24,6 @@ import {
   CardBody,
   CardFooter,
   CardTitle,
-  ListGroupItem,
-  ListGroup,
   Container,
   Row,
   Col
@@ -36,8 +32,6 @@ import {
 // core components
 import ExamplesNavbar from "components/Navbars/ExamplesNavbar.js";
 import Footer from "components/Footer/Footer.js";
-
-import bigChartData from "variables/charts.js";
 
 export default function LandingPage() {
   React.useEffect(() => {
@@ -82,71 +76,74 @@ export default function LandingPage() {
             className="shapes circle"
             src={require("assets/img/cercuri.png")}
           />
+            
           <div className="content-center">
             <Row className="row-grid justify-content-between align-items-center text-left">
               <Col lg="6" md="6">
-                <h1 className="text-white">
-                  We keep your coin <br />
-                  <span className="text-white">secured</span>
-                </h1>
+              <h1 className="h1-seo">TOXIC BAEBEE NFTS</h1>
                 <p className="text-white mb-3">
-                  A wonderful serenity has taken possession of my entire soul,
-                  like these sweet mornings of spring which I enjoy with my
-                  whole heart. I am alone, and feel...
+                The beauty industry lacks transparency and regulation. Beauty
+                consumers are frustrated with misleading information And
+                exaggerated marketing claims.
+                <br />
+                <br />
+                This deceptive industry which idolizes the "Skinny And Beauty
+                Culture," leads many customers to obtain unnecessary plastic
+                surgery, unhealthy eating habits, and unknowingly use beauty
+                products with toxic ingredients.
+                <br />
+                <br />
+                The "Toxic Baebee" NFT Series was designed to generate public
+                awareness by illustrating the "Toxic Side Of Beauty."
                 </p>
-                <div className="btn-wrapper mb-3">
-                  <p className="category text-success d-inline">
-                    From 9.99%/mo
-                  </p>
-                  <Button
-                    className="btn-link"
-                    color="success"
-                    href="#pablo"
-                    onClick={(e) => e.preventDefault()}
-                    size="sm"
-                  >
-                    <i className="tim-icons icon-minimal-right" />
-                  </Button>
-                </div>
                 <div className="btn-wrapper">
                   <div className="button-container">
-                    <Button
-                      className="btn-icon btn-simple btn-round btn-neutral"
-                      color="default"
-                      href="#pablo"
-                      onClick={(e) => e.preventDefault()}
-                    >
-                      <i className="fab fa-twitter" />
-                    </Button>
-                    <Button
-                      className="btn-icon btn-simple btn-round btn-neutral"
-                      color="default"
-                      href="#pablo"
-                      onClick={(e) => e.preventDefault()}
-                    >
-                      <i className="fab fa-dribbble" />
-                    </Button>
-                    <Button
-                      className="btn-icon btn-simple btn-round btn-neutral"
-                      color="default"
-                      href="#pablo"
-                      onClick={(e) => e.preventDefault()}
-                    >
-                      <i className="fab fa-facebook" />
-                    </Button>
+                  <Button
+                className="nav-link d-none d-lg-block"
+                color="primary">
+                <i className="tim-icons icon-spaceship" /> MINT - x MATIC
+              </Button>
                   </div>
                 </div>
               </Col>
               <Col lg="4" md="5">
-                <img
-                  alt="..."
-                  className="img-fluid"
-                  src={require("assets/img/etherum.png")}
-                />
+              <img style={{height: "30vh", width: "30vh"}} alt={"toxic baebees"} src={require("./example.gif")} />
               </Col>
             </Row>
           </div>
         </div>
+        <div className="wrapper">
+        <div className="page-header">
+
+        <div className="content-center">
+            <Row className="row-grid justify-content-between align-items-center text-left">
+              <Col lg="6" md="6">
+              <h1 className="h1-seo">PIXELATED TOXIC BAEBEE NFTS</h1>
+                <p className="text-white mb-3">
+                We're so excited to introduce our new pixelated Toxic Baebee NFT
+                series - Limited to 1000 total NFTs, The Pixelated variation
+                better illustrates the beauty industry's lack of transparency,
+                and it's filled with misleading marketing claims, unrealistic
+                expectations, and harmful ingredients that risk our health. This
+                NFT series aims to raise awareness of "Toxic Side of Beauty."
+                </p>
+                <div className="btn-wrapper">
+                  <div className="button-container">
+                  <Button
+                className="nav-link d-none d-lg-block"
+                color="primary">
+                <i className="tim-icons icon-spaceship" /> MINT - x MATIC
+              </Button>
+                  </div>
+                </div>
+              </Col>
+              <Col lg="4" md="5">
+              <img style={{height: "30vh", width: "30vh"}} alt={"toxic baebees"} src={require("./pixelated.gif")} />
+              </Col>
+            </Row>
+          </div>
+</div>
+</div>
         <section className="section section-lg">
           <section className="section">
             <img
@@ -154,121 +151,87 @@ export default function LandingPage() {
               className="path"
               src={require("assets/img/path4.png")}
             />
-            <Container>
+            <Container stlye={{marginBottom: "30vh"}}>
               <Row className="row-grid justify-content-between">
                 <Col className="mt-lg-5" md="5">
-                  <Row>
-                    <Col className="px-2 py-2" lg="6" sm="12">
-                      <Card className="card-stats">
-                        <CardBody>
-                          <Row>
-                            <Col md="4" xs="5">
-                              <div className="icon-big text-center icon-warning">
-                                <i className="tim-icons icon-trophy text-warning" />
-                              </div>
-                            </Col>
-                            <Col md="8" xs="7">
-                              <div className="numbers">
-                                <CardTitle tag="p">3,237</CardTitle>
-                                <p />
-                                <p className="card-category">Awards</p>
-                              </div>
-                            </Col>
-                          </Row>
-                        </CardBody>
-                      </Card>
-                    </Col>
-                    <Col className="px-2 py-2" lg="6" sm="12">
-                      <Card className="card-stats upper bg-default">
-                        <CardBody>
-                          <Row>
-                            <Col md="4" xs="5">
-                              <div className="icon-big text-center icon-warning">
-                                <i className="tim-icons icon-coins text-white" />
-                              </div>
-                            </Col>
-                            <Col md="8" xs="7">
-                              <div className="numbers">
-                                <CardTitle tag="p">3,653</CardTitle>
-                                <p />
-                                <p className="card-category">Commits</p>
-                              </div>
-                            </Col>
-                          </Row>
-                        </CardBody>
-                      </Card>
-                    </Col>
-                  </Row>
-                  <Row>
-                    <Col className="px-2 py-2" lg="6" sm="12">
-                      <Card className="card-stats">
-                        <CardBody>
-                          <Row>
-                            <Col md="4" xs="5">
-                              <div className="icon-big text-center icon-warning">
-                                <i className="tim-icons icon-gift-2 text-info" />
-                              </div>
-                            </Col>
-                            <Col md="8" xs="7">
-                              <div className="numbers">
-                                <CardTitle tag="p">593</CardTitle>
-                                <p />
-                                <p className="card-category">Presents</p>
-                              </div>
-                            </Col>
-                          </Row>
-                        </CardBody>
-                      </Card>
-                    </Col>
-                    <Col className="px-2 py-2" lg="6" sm="12">
-                      <Card className="card-stats">
-                        <CardBody>
-                          <Row>
-                            <Col md="4" xs="5">
-                              <div className="icon-big text-center icon-warning">
-                                <i className="tim-icons icon-credit-card text-success" />
-                              </div>
-                            </Col>
-                            <Col md="8" xs="7">
-                              <div className="numbers">
-                                <CardTitle tag="p">10,783</CardTitle>
-                                <p />
-                                <p className="card-category">Forks</p>
-                              </div>
-                            </Col>
-                          </Row>
-                        </CardBody>
-                      </Card>
-                    </Col>
-                  </Row>
-                </Col>
-                <Col md="6">
+                <Col md="12">
                   <div className="pl-md-5">
                     <h1>
-                      Large <br />
-                      Achivements
+                      Specifications
                     </h1>
-                    <p>
-                      I should be capable of drawing a single stroke at the
-                      present moment; and yet I feel that I never was a greater
-                      artist than now.
-                    </p>
-                    <br />
-                    <p>
-                      When, while the lovely valley teems with vapour around me,
-                      and the meridian sun strikes the upper surface of the
-                      impenetrable foliage of my trees, and but a few stray.
-                    </p>
-                    <br />
-                    <a
-                      className="font-weight-bold text-info mt-5"
-                      href="#pablo"
-                      onClick={(e) => e.preventDefault()}
-                    >
-                      Show all{" "}
-                      <i className="tim-icons icon-minimal-right text-info" />
-                    </a>
                   </div>
+                </Col>
+                  <Row>
+                    <Col className="px-2 py-2" lg="12" sm="12">
+                      <Card className="card-stats">
+                        <CardBody>
+                          <Row>
+                            <Col md="4" xs="5">
+                              <div className="icon-big text-center icon-warning">
+                              <img style={{height: "5vh", width: "5vh"}} alt={"toxic baebees"} src={require("./userw.png")} />
+                              </div>
+                            </Col>
+                            <Col md="8" xs="7">
+                              <div className="numbers">
+                                <CardTitle tag="p" style={{textAlign: "left"}}>The Characters</CardTitle>
+                        
+                                <p className="card-category" style={{textAlign: "left"}}>Each unique Baebee is designed by our creative team that
+                    generates over 170 Possible traits. These include but are
+                    not limited to expression, headwear, and clothing. We
+                    developed 4000 Toxic Baebees are 2D, 1000 Toxic Baebee are
+                    Pixelated, And 7 Limited Toxic Baebee Edition are 3D.</p>
+                              </div>
+                            </Col>
+                          </Row>
+                        </CardBody>
+                      </Card>
+                    </Col>
+                    <Col className="px-2 py-2" lg="12" sm="12">
+                      <Card className="card-stats">
+                        <CardBody>
+                          <Row>
+                            <Col md="4" xs="5">
+                              <div className="icon-big text-center icon-warning">
+                              <img style={{height: "5vh", width: "5vh"}} alt={"toxic baebees"} src={require("./polygonw.png")} />
+                              </div>
+                            </Col>
+                            <Col md="8" xs="7">
+                              <div className="numbers">
+                                <CardTitle tag="p" style={{textAlign: "left"}}>ERC-721</CardTitle>
+                                <p />
+                                <p className="card-category" style={{textAlign: "left"}}>The Baebees NFT Contract that governs ownership is a
+                    standard ERC-721 compatible with any service or exchange.
+                    Purchasing Baebee NFT costs 25/50 MATIC - POLYGON, and 3D
+                    costs 0.2 ETH.</p>
+                              </div>
+                            </Col>
+                          </Row>
+                        </CardBody>
+                      </Card>
+                    </Col>
+                    <Col className="px-2 py-2" lg="12" sm="12">
+                      <Card className="card-stats">
+                        <CardBody>
+                          <Row>
+                            <Col md="4" xs="5">
+                              <div className="icon-big text-center icon-warning">
+                              <img style={{height: "5vh", width: "5vh"}} alt={"toxic baebees"} src={require("./cardw.png")} />
+                              </div>
+                            </Col>
+                            <Col md="8" xs="7">
+                              <div className="numbers">
+                                <CardTitle tag="p" style={{textAlign: "left"}}>Specialty</CardTitle>
+                                <p />
+                                <p className="card-category" style={{textAlign: "left"}}> Baebees NFTs are exchangeable for ReautyCoin (ERC-20
+                    Token). We allow our NFT owner to convert their NFT To our
+                    ReautyCoin. Please check the ReautyDAO page to learn more.</p>
+                              </div>
+                            </Col>
+                          </Row>
+                        </CardBody>
+                      </Card>
+                    </Col>
+                  </Row>
                 </Col>
               </Row>
             </Container>
@@ -293,47 +256,60 @@ export default function LandingPage() {
           <Container>
             <Row className="justify-content-center">
               <Col lg="12">
-                <h1 className="text-center">Your best benefit</h1>
+                <h1 className="text-center">Meet The Characters</h1>
                 <Row className="row-grid justify-content-center">
                   <Col lg="3">
                     <div className="info">
                       <div className="icon icon-primary">
-                        <i className="tim-icons icon-money-coins" />
+                        <img src={require("./Unreal.png")} alt="unreal" />
                       </div>
-                      <h4 className="info-title">Low Commission</h4>
+                      <h4 className="info-title">Unreal Baebee</h4>
                       <hr className="line-primary" />
                       <p>
-                        Divide details about your work into parts. Write a few
-                        lines about each one. A paragraph describing a feature
-                        will.
+                      As technology continues connecting us, people are
+                    increasingly investing in appearances. While it's exciting
+                    to have the freedom to express ourselves through fashion, it
+                    can also be harmful. Instead of being blinded by trends and
+                    clickbait images, we should focus on maintaining our natural
+                    beauty. Let's remind each other that authenticity is the
+                    most beautiful thing we can possess.
                       </p>
                     </div>
                   </Col>
                   <Col lg="3">
                     <div className="info">
                       <div className="icon icon-warning">
-                        <i className="tim-icons icon-chart-pie-36" />
+                      <img src={require("./Vampire.png")} alt="Vampire" />
                       </div>
-                      <h4 className="info-title">High Incomes</h4>
+                      <h4 className="info-title">Contaminated Baebee</h4>
                       <hr className="line-warning" />
                       <p>
-                        Divide details about your product or agency work into
-                        parts. Write a few lines about each one. A paragraph
-                        describing feature will be a feature.
+                      It's shocking to think how much harm some beauty products
+                    and non-biodegradable packaging can do to the environment.
+                    It's time for beauty brands to step up and take action by
+                    transitioning to more eco-friendly alternatives. It's up to
+                    us as consumers to demand this shift, and we can use our
+                    voices to show brands which practices we support and which
+                    we don't.
                       </p>
                     </div>
                   </Col>
                   <Col lg="3">
                     <div className="info">
                       <div className="icon icon-success">
-                        <i className="tim-icons icon-single-02" />
+                      <img src={require("./Zombie.png")} alt="Zombie" />
                       </div>
-                      <h4 className="info-title">Verified People</h4>
+                      <h4 className="info-title">Poisoned Baebee</h4>
                       <hr className="line-success" />
                       <p>
-                        Divide details about your product or agency work into
-                        parts. Write a few lines about each one. A paragraph
-                        describing be enough.
+                      As consumers, we're all constantly faced with many choices
+                    about what we buy and put in our bodies. But many beauty
+                    products are filled with harmful chemicals that can affect
+                    our health. And their advertising slogans, designed to
+                    appeal to our vanity, are corroding our minds. We're sick of
+                    being brainwashed into believing that these products are
+                    harmless. It's time to change this. Let's start by choosing
+                    brands that use safe, natural ingredients.
                       </p>
                     </div>
                   </Col>
@@ -341,132 +317,139 @@ export default function LandingPage() {
               </Col>
             </Row>
           </Container>
-        </section>
-        <section className="section section-lg section-safe">
-          <img
-            alt="..."
-            className="path"
-            src={require("assets/img/path5.png")}
-          />
           <Container>
-            <Row className="row-grid justify-content-between">
-              <Col md="5">
-                <img
-                  alt="..."
-                  className="img-fluid floating"
-                  src={require("assets/img/chester-wade.jpg")}
-                />
-                <Card className="card-stats bg-danger">
-                  <CardBody>
-                    <div className="justify-content-center">
-                      <div className="numbers">
-                        <CardTitle tag="p">100%</CardTitle>
-                        <p className="card-category text-white">Safe</p>
+            <Row className="justify-content-center">
+              <Col lg="12">
+                <Row className="row-grid justify-content-center">
+                  <Col lg="3">
+                    <div className="info">
+                      <div className="icon icon-primary">
+                      <img src={require("./Frida1.png")} alt="Frida" />
                       </div>
+                      <h4 className="info-title">Mask Baebee</h4>
+                      <hr className="line-primary" />
+                      <p>
+                      What used to be a diverse and inclusive global society is
+                    slowly disappearing. Everyone seems to be wearing the same
+                    mask, conforming to what the mainstream likes, and losing
+                    their individuality. This is a dangerous trend; if we don't
+                    act now, we will lose the things that make us unique. Let's
+                    celebrate our differences and preserve our individuality.
+                      </p>
                     </div>
-                  </CardBody>
-                </Card>
-                <Card className="card-stats bg-info">
-                  <CardBody>
-                    <div className="justify-content-center">
-                      <div className="numbers">
-                        <CardTitle tag="p">573 K</CardTitle>
-                        <p className="card-category text-white">
-                          Satisfied customers
-                        </p>
+                  </Col>
+                  <Col lg="3">
+                    <div className="info">
+                      <div className="icon icon-warning">
+                      <img src={require("./Clown.png")} alt="clown" />
                       </div>
+                      <h4 className="info-title">Joker Baebee</h4>
+                      <hr className="line-warning" />
+                      <p>
+                      Exaggerated advertisements and deformed aesthetics have
+                    created real-life clowns. The innocence and charm that once
+                    distinguished these statues have been replaced by pain and
+                    fear. Plastic surgery went wrong, and the poisoning of
+                    harmful cosmetics has turned the victim into just another
+                    joker.
+                      </p>
                     </div>
-                  </CardBody>
-                </Card>
-                <Card className="card-stats bg-default">
-                  <CardBody>
-                    <div className="justify-content-center">
-                      <div className="numbers">
-                        <CardTitle tag="p">10 425</CardTitle>
-                        <p className="card-category text-white">Business</p>
+                  </Col>
+                  <Col lg="3">
+                    <div className="info">
+                      <div className="icon icon-success">
+                      <img src={require("./Fire.png")} alt="fire" />
                       </div>
+                      <h4 className="info-title">Fire Baebee</h4>
+                      <hr className="line-success" />
+                      <p>
+                      Sometimes, it feels like we're wasting our time and energy
+                    on fake beauty info, misleading ads, and failed trials. It
+                    doesn't help that the flames of anger come up when you get
+                    upset. But it's important to remember that we're not alone.
+                    We can all support each other as we navigate this crazy
+                    beauty industry.
+                      </p>
                     </div>
-                  </CardBody>
-                </Card>
-              </Col>
-              <Col md="6">
-                <div className="px-md-5">
-                  <hr className="line-success" />
-                  <h3>Awesome features</h3>
-                  <p>
-                    The design system comes with three pre-built pages to help
-                    you get started faster. You can change the text and images
-                    and you're good to go.
-                  </p>
-                  <ul className="list-unstyled mt-5">
-                    <li className="py-2">
-                      <div className="d-flex align-items-center">
-                        <div className="icon icon-success mb-2">
-                          <i className="tim-icons icon-vector" />
-                        </div>
-                        <div className="ml-3">
-                          <h6>Carefully crafted components</h6>
-                        </div>
-                      </div>
-                    </li>
-                    <li className="py-2">
-                      <div className="d-flex align-items-center">
-                        <div className="icon icon-success mb-2">
-                          <i className="tim-icons icon-tap-02" />
-                        </div>
-                        <div className="ml-3">
-                          <h6>Amazing page examples</h6>
-                        </div>
-                      </div>
-                    </li>
-                    <li className="py-2">
-                      <div className="d-flex align-items-center">
-                        <div className="icon icon-success mb-2">
-                          <i className="tim-icons icon-single-02" />
-                        </div>
-                        <div className="ml-3">
-                          <h6>Super friendly support team</h6>
-                        </div>
-                      </div>
-                    </li>
-                  </ul>
-                </div>
+                  </Col>
+                </Row>
               </Col>
             </Row>
           </Container>
-        </section>
-        <section className="section section-lg">
-          <img
-            alt="..."
-            className="path"
-            src={require("assets/img/path4.png")}
-          />
-          <img
-            alt="..."
-            className="path2"
-            src={require("assets/img/path2.png")}
-          />
-          <Col md="12">
-            <Card className="card-chart card-plain">
-              <CardHeader>
-                <Row>
-                  <Col className="text-left" sm="6">
-                    <hr className="line-info" />
-                    <h5 className="card-category">Total Investments</h5>
-                    <CardTitle tag="h2">Performance</CardTitle>
+          <section className="section section-lg section-safe">
+          <Container>
+            <Row className="justify-content-center">
+              <Col lg="12">
+                <h1 className="text-center">3D TOXIC BAEBEES - LIMITED EDITION</h1>
+                <Row className="row-grid justify-content-center">
+                  <Col lg="3">
+                    <div className="info">
+                      <div className="icon icon-primary">
+                        <img src={require("./3d.gif")} alt="unreal" />
+                      </div>
+                      <h4 className="info-title">Reauty DAO</h4>
+                      <hr className="line-primary" />
+                      <p>
+                      Reauty DAO community empowers all members with ownership,
+                    control, and monetization of their beauty-relevant data.
+                    Overall, community members have the power to build a new
+                    order in the beauty industry with transparency,
+                    inclusiveness, and authenticity supported by blockchain
+                    technology!
+                    <br />
+                    <br />
+                    Creating a truly decentralized and trustworthy beauty
+                    community is vital for every beauty stakeholder worldwide,
+                    and we're excited to lead this disruptive beauty
+                    transformation.
+                      </p>
+                    </div>
+                  </Col>
+                  <Col lg="3">
+                    <div className="info">
+                      <div className="icon icon-warning">
+                      <img src={require("./3d1.gif")} alt="Vampire" />
+                      </div>
+                      <h4 className="info-title">Why NFTs?</h4>
+                      <hr className="line-warning" />
+                      <p>
+                      The beauty industry needs to do better. We see firsthand how
+                    misleading marketing claims, exaggerated claims, and
+                    unrealistic expectations lead to unhealthy choices for our
+                    customers. That's why we're launching the first NFT series:
+                    Toxic Baebaee! Each variation is entirely customizable with
+                    3D, Pixelated, and 2D so you can choose the best look. This
+                    NFT series will help raise awareness of the toxic beauty
+                    industry while empowering consumers to make healthier
+                    choices.
+                      </p>
+                    </div>
+                  </Col>
+                  <Col lg="3">
+                    <div className="info">
+                      <div className="icon icon-success">
+                      <img src={require("./3d3.gif")} alt="Zombie" />
+                      </div>
+                      <h4 className="info-title">NFT Purchase = DAO Membership</h4>
+                      <hr className="line-success" />
+                      <p>
+                      It's Halloween season, and we're celebrating by slashing
+                    prices on Toxic Baebee NFTs from midnight on 31st Oct 2022
+                    until 30th Nov 2022! 
+                    <br />
+                    <br />
+                    The first 100 Toxic Baebee NFT owners will get 0.1 ETH worth
+                    of Reauty DAO membership, giving them access to all the
+                    community privileges and powers to improve the web3 beauty
+                    community. Don't miss out on this spooky deal!
+                      </p>
+                    </div>
                   </Col>
                 </Row>
-              </CardHeader>
-              <CardBody>
-                <div className="chart-area">
-                  <Line
-                    data={bigChartData.data}
-                    options={bigChartData.options}
-                  />
-                </div>
-              </CardBody>
-            </Card>
-          </Col>
+              </Col>
+            </Row>
+          </Container>
+          </section>
         </section>
         <section className="section section-lg section-coins">
           <img
@@ -479,8 +462,7 @@ export default function LandingPage() {
               <Col md="4">
                 <hr className="line-info" />
                 <h1>
-                  Choose the coin{" "}
-                  <span className="text-info">that fits your needs</span>
+                  Recent{" "}Mints
                 </h1>
               </Col>
             </Row>
@@ -491,92 +473,68 @@ export default function LandingPage() {
                     <img
                       alt="..."
                       className="img-center img-fluid"
-                      src={require("assets/img/bitcoin.png")}
+                      src="https://i.seadn.io/gae/_v-_d-QcL3fB2j96ZxUopcsHwr5WljtdzqIBRp42HRqlq-66d0Fp71aUfKPvhrzX6AoCRP6rc_rIEwqWsoZeRr-uqrWRm6zqP7PdonE?auto=format&w=1000"
                     />
                   </CardHeader>
                   <CardBody>
                     <Row>
                       <Col className="text-center" md="12">
-                        <h4 className="text-uppercase">Light Coin</h4>
-                        <span>Plan</span>
+                        <h4 className="text-uppercase">Toxic Baebee #1</h4>
                         <hr className="line-primary" />
                       </Col>
-                    </Row>
-                    <Row>
-                      <ListGroup>
-                        <ListGroupItem>50 messages</ListGroupItem>
-                        <ListGroupItem>100 emails</ListGroupItem>
-                        <ListGroupItem>24/7 Support</ListGroupItem>
-                      </ListGroup>
                     </Row>
                   </CardBody>
                   <CardFooter className="text-center">
                     <Button className="btn-simple" color="primary">
-                      Get plan
+                      View Collection
                     </Button>
                   </CardFooter>
                 </Card>
               </Col>
               <Col md="4">
-                <Card className="card-coin card-plain">
+              <Card className="card-coin card-plain">
                   <CardHeader>
                     <img
                       alt="..."
                       className="img-center img-fluid"
-                      src={require("assets/img/etherum.png")}
+                      src="https://i.seadn.io/gae/Yst4YG30_k7JxMUJ0E8g9jvdfEHz19Sxioye0L59VxifdtbWRiipnv062qwaRvlL9_C2fKxA8VmfjtjJ8VIb627wmmHQdr_rBh28dw?auto=format&w=1000"
                     />
                   </CardHeader>
                   <CardBody>
                     <Row>
                       <Col className="text-center" md="12">
-                        <h4 className="text-uppercase">Dark Coin</h4>
-                        <span>Plan</span>
-                        <hr className="line-success" />
+                        <h4 className="text-uppercase">Pixelated Toxic Baebee #1</h4>
+                        <hr className="line-primary" />
                       </Col>
-                    </Row>
-                    <Row>
-                      <ListGroup>
-                        <ListGroupItem>150 messages</ListGroupItem>
-                        <ListGroupItem>1000 emails</ListGroupItem>
-                        <ListGroupItem>24/7 Support</ListGroupItem>
-                      </ListGroup>
                     </Row>
                   </CardBody>
                   <CardFooter className="text-center">
-                    <Button className="btn-simple" color="success">
-                      Get plan
+                    <Button className="btn-simple" color="primary">
+                      View Collection
                     </Button>
                   </CardFooter>
                 </Card>
               </Col>
               <Col md="4">
-                <Card className="card-coin card-plain">
+              <Card className="card-coin card-plain">
                   <CardHeader>
                     <img
                       alt="..."
                       className="img-center img-fluid"
-                      src={require("assets/img/ripp.png")}
+                      src="https://i.seadn.io/gae/tWeVD95U92BTHewJVhuJKEKGlPqhPnYreD4sPgRSyqtvLe8Al4WqNQxVVnF-LK3i24DrGg5fhBDsYXlUtV_Oww6t3kVz25bfFuvB?auto=format&w=1000"
                     />
                   </CardHeader>
                   <CardBody>
                     <Row>
                       <Col className="text-center" md="12">
-                        <h4 className="text-uppercase">Bright Coin</h4>
-                        <span>Plan</span>
-                        <hr className="line-info" />
+                        <h4 className="text-uppercase">Toxic Baebee #2</h4>
+                        <hr className="line-primary" />
                       </Col>
-                    </Row>
-                    <Row>
-                      <ListGroup>
-                        <ListGroupItem>350 messages</ListGroupItem>
-                        <ListGroupItem>10K emails</ListGroupItem>
-                        <ListGroupItem>24/7 Support</ListGroupItem>
-                      </ListGroup>
                     </Row>
                   </CardBody>
                   <CardFooter className="text-center">
-                    <Button className="btn-simple" color="info">
-                      Get plan
+                    <Button className="btn-simple" color="primary">
+                      View Collection
                     </Button>
                   </CardFooter>
                 </Card>

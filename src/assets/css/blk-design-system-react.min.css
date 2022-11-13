@@ -3689,7 +3689,7 @@ input[type="button"].btn-block {
   display: block;
   min-height: 1.3125rem;
   padding-left: 3rem;
-  color-adjust: exact;
+  print-color-adjust: exact;
 }
 .custom-control-inline {
   display: inline-flex;
@@ -18459,11 +18459,9 @@ hr.line-deafult {
   text-align: center;
   color: #fff;
   padding: 0 15px;
-  width: 100%;
-  max-width: 880px;
 }
 .page-header .content-center.brand {
-  width: 47%;
+  width: 100% !important;
 }
 .page-header footer {
   position: absolute;

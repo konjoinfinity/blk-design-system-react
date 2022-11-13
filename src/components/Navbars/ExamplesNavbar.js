@@ -47,7 +47,7 @@ export default function ExamplesNavbar() {
       document.documentElement.scrollTop > 99 ||
       document.body.scrollTop > 99
     ) {
-      setColor("bg-info");
+      setColor("bg-warning");
     } else if (
       document.documentElement.scrollTop < 100 ||
       document.body.scrollTop < 100
@@ -70,8 +70,12 @@ export default function ExamplesNavbar() {
       <Container>
         <div className="navbar-translate">
           <NavbarBrand to="/" id="navbar-brand" tag={Link}>
-            <span>BLK• </span>
-            Design System React
+          <img style={{height: "7vh", boxShadow: "0px 2px 5px 2px rgba(0, 0, 0, 0.1)",
+  backgroundColor: "#fff",
+  borderRadius: "20%",
+  width: "7vh",
+  padding: "1vh",
+  margin: "0.5vh"}} src={require("./reauty-logo.png")} alt="test"></img>
           </NavbarBrand>
           <UncontrolledTooltip placement="bottom" target="navbar-brand">
             Designed and Coded by Creative Tim
@@ -149,24 +153,10 @@ export default function ExamplesNavbar() {
               </NavLink>
             </NavItem>
             <NavItem>
-              <Button
-                className="nav-link d-none d-lg-block"
-                color="primary"
-                target="_blank"
-                href="https://www.creative-tim.com/product/blk-design-system-pro-react?ref=bdsr-examples-navbar-upgrade-pro"
-              >
-                <i className="tim-icons icon-spaceship" /> Upgrade to PRO
-              </Button>
-            </NavItem>
-            <NavItem>
-              <NavLink tag={Link} to="/">
-                Back to Kit
-              </NavLink>
-            </NavItem>
-            <NavItem>
-              <NavLink href="https://github.com/creativetimofficial/blk-design-system-react/issues">
-                Have an issue?
-              </NavLink>
+          <Button
+        color="primary">
+        Connect Wallet
+      </Button>
             </NavItem>
           </Nav>
         </Collapse>
