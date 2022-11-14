@@ -17,94 +17,252 @@
 */
 import React from "react";
 // reactstrap components
-import { Button, Container, Row, Col, UncontrolledTooltip } from "reactstrap";
+import { Button, Container, Row, Col, Card, CardBody, CardFooter, CardHeader } from "reactstrap";
 
 export default function Download() {
   return (
-    <div
-      className="section section-download"
-      data-background-color="black"
-      id="download-section"
-    >
-      <img alt="..." className="path" src={require("assets/img/path1.png")} />
-      <Container>
-        <Row className="justify-content-md-center">
-          <Col className="text-center" lg="8" md="12">
-            <h2 className="title">
-              Do you love this Bootstrap 4 React Design System?
-            </h2>
-            <h4 className="description">
-              Cause if you do, it can be yours for FREE. Hit the button below to
-              navigate to Creative Tim where you can find the design system in
-              React format. Start a new project or give an old Bootstrap project
-              a new look!
-            </h4>
-          </Col>
-          <Col className="text-center" lg="8" md="12">
-            <Button
-              className="btn-round"
-              color="info"
-              href="https://www.creative-tim.com/product/blk-design-system-react?ref=blkdsr-index-page-download-section"
-              role="button"
-              size="lg"
-            >
-              Download React
-            </Button>
-          </Col>
-        </Row>
-        <br />
-        <br />
-        <br />
-        <br />
-        <br />
-        <Row className="row-grid align-items-center my-md">
-          <Col lg="6">
-            <h3 className="text-info font-weight-light mb-2">
-              Thank you for supporting us!
-            </h3>
-            <h4 className="mb-0 font-weight-light">
-              Let's get in touch on any of these platforms.
-            </h4>
-          </Col>
-          <Col className="text-lg-center btn-wrapper" lg="6">
-            <Button
-              className="btn-icon btn-round"
-              color="twitter"
-              id="twitter"
-              size="lg"
-            >
-              <i className="fab fa-twitter" />
-            </Button>
-            <UncontrolledTooltip delay={0} target="twitter">
-              Tweet!
-            </UncontrolledTooltip>
-            <Button
-              className="btn-icon btn-round"
-              color="facebook"
-              id="facebook"
-              size="lg"
-            >
-              <i className="fab fa-facebook-square" />
-            </Button>
-            <UncontrolledTooltip delay={0} target="facebook">
-              Share!
-            </UncontrolledTooltip>
-            <Button
-              className="btn-icon btn-round"
-              color="github"
-              href="https://github.com/creativetimofficial"
-              id="tooltip877922017"
-              size="lg"
-              target="_blank"
-            >
-              <i className="fab fa-github" />
-            </Button>
-            <UncontrolledTooltip delay={0} target="tooltip877922017">
-              Star on Github
-            </UncontrolledTooltip>
-          </Col>
-        </Row>
-      </Container>
-    </div>
+    <section className="section section-lg section-coins">
+          <img
+            alt="..."
+            className="path"
+            src={require("assets/img/path3.png")}
+          />
+          <Container>
+            <Row>
+              <Col md="4">
+                <hr className="line-info" />
+                <h1>Recent Mints</h1>
+              </Col>
+            </Row>
+            <Row>
+              <Col md="4">
+                <Card className="card-coin card-plain">
+                  <CardHeader>
+                    <img
+                      alt="..."
+                      className="img-center img-fluid"
+                      src="https://i.seadn.io/gae/_v-_d-QcL3fB2j96ZxUopcsHwr5WljtdzqIBRp42HRqlq-66d0Fp71aUfKPvhrzX6AoCRP6rc_rIEwqWsoZeRr-uqrWRm6zqP7PdonE?auto=format&w=1000"
+                    />
+                  </CardHeader>
+                  <CardBody>
+                    <Row>
+                      <Col className="text-center" md="12">
+                        <h4 className="text-uppercase">Toxic Baebee #1</h4>
+                        <hr className="line-primary" />
+                      </Col>
+                    </Row>
+                  </CardBody>
+                  <CardFooter className="text-center">
+                    <Button className="btn-simple" color="primary">
+                      View Collection
+                    </Button>
+                  </CardFooter>
+                </Card>
+              </Col>
+              <Col md="4">
+                <Card className="card-coin card-plain">
+                  <CardHeader>
+                    <img
+                      alt="..."
+                      className="img-center img-fluid"
+                      src="https://i.seadn.io/gae/Yst4YG30_k7JxMUJ0E8g9jvdfEHz19Sxioye0L59VxifdtbWRiipnv062qwaRvlL9_C2fKxA8VmfjtjJ8VIb627wmmHQdr_rBh28dw?auto=format&w=1000"
+                    />
+                  </CardHeader>
+                  <CardBody>
+                    <Row>
+                      <Col className="text-center" md="12">
+                        <h4 className="text-uppercase">
+                          Pixelated Toxic Baebee #1
+                        </h4>
+                        <hr className="line-info" />
+                      </Col>
+                    </Row>
+                  </CardBody>
+                  <CardFooter className="text-center">
+                    <Button className="btn-simple" color="info">
+                      View Collection
+                    </Button>
+                  </CardFooter>
+                </Card>
+              </Col>
+              <Col md="4">
+                <Card className="card-coin card-plain">
+                  <CardHeader>
+                    <img
+                      alt="..."
+                      className="img-center img-fluid"
+                      src="https://i.seadn.io/gae/tWeVD95U92BTHewJVhuJKEKGlPqhPnYreD4sPgRSyqtvLe8Al4WqNQxVVnF-LK3i24DrGg5fhBDsYXlUtV_Oww6t3kVz25bfFuvB?auto=format&w=1000"
+                    />
+                  </CardHeader>
+                  <CardBody>
+                    <Row>
+                      <Col className="text-center" md="12">
+                        <h4 className="text-uppercase">Toxic Baebee #2</h4>
+                        <hr className="line-success" />
+                      </Col>
+                    </Row>
+                  </CardBody>
+                  <CardFooter className="text-center">
+                    <Button className="btn-simple" color="success">
+                      View Collection
+                    </Button>
+                  </CardFooter>
+                </Card>
+              </Col>
+            </Row>
+            <Row style={{marginTop: "10vh"}}>
+              <Col md="4">
+                <Card className="card-coin card-plain">
+                  <CardHeader>
+                    <img
+                      alt="..."
+                      className="img-center img-fluid"
+                      src="https://i.seadn.io/gae/_v-_d-QcL3fB2j96ZxUopcsHwr5WljtdzqIBRp42HRqlq-66d0Fp71aUfKPvhrzX6AoCRP6rc_rIEwqWsoZeRr-uqrWRm6zqP7PdonE?auto=format&w=1000"
+                    />
+                  </CardHeader>
+                  <CardBody>
+                    <Row>
+                      <Col className="text-center" md="12">
+                        <h4 className="text-uppercase">Toxic Baebee #2</h4>
+                        <hr className="line-warning" />
+                      </Col>
+                    </Row>
+                  </CardBody>
+                  <CardFooter className="text-center">
+                    <Button className="btn-simple" color="warning">
+                      View Collection
+                    </Button>
+                  </CardFooter>
+                </Card>
+              </Col>
+              <Col md="4">
+                <Card className="card-coin card-plain">
+                  <CardHeader>
+                    <img
+                      alt="..."
+                      className="img-center img-fluid"
+                      src="https://i.seadn.io/gae/Yst4YG30_k7JxMUJ0E8g9jvdfEHz19Sxioye0L59VxifdtbWRiipnv062qwaRvlL9_C2fKxA8VmfjtjJ8VIb627wmmHQdr_rBh28dw?auto=format&w=1000"
+                    />
+                  </CardHeader>
+                  <CardBody>
+                    <Row>
+                      <Col className="text-center" md="12">
+                        <h4 className="text-uppercase">
+                          Pixelated Toxic Baebee #3
+                        </h4>
+                        <hr className="line-danger" />
+                      </Col>
+                    </Row>
+                  </CardBody>
+                  <CardFooter className="text-center">
+                    <Button className="btn-simple" color="danger">
+                      View Collection
+                    </Button>
+                  </CardFooter>
+                </Card>
+              </Col>
+              <Col md="4">
+                <Card className="card-coin card-plain">
+                  <CardHeader>
+                    <img
+                      alt="..."
+                      className="img-center img-fluid"
+                      src="https://i.seadn.io/gae/tWeVD95U92BTHewJVhuJKEKGlPqhPnYreD4sPgRSyqtvLe8Al4WqNQxVVnF-LK3i24DrGg5fhBDsYXlUtV_Oww6t3kVz25bfFuvB?auto=format&w=1000"
+                    />
+                  </CardHeader>
+                  <CardBody>
+                    <Row>
+                      <Col className="text-center" md="12">
+                        <h4 className="text-uppercase">Toxic Baebee #3</h4>
+                        <hr className="line-primary" />
+                      </Col>
+                    </Row>
+                  </CardBody>
+                  <CardFooter className="text-center">
+                    <Button className="btn-simple" color="primary">
+                      View Collection
+                    </Button>
+                  </CardFooter>
+                </Card>
+              </Col>
+            </Row>
+            <Row style={{marginTop: "10vh"}}>
+              <Col md="4">
+                <Card className="card-coin card-plain">
+                  <CardHeader>
+                    <img
+                      alt="..."
+                      className="img-center img-fluid"
+                      src="https://i.seadn.io/gae/_v-_d-QcL3fB2j96ZxUopcsHwr5WljtdzqIBRp42HRqlq-66d0Fp71aUfKPvhrzX6AoCRP6rc_rIEwqWsoZeRr-uqrWRm6zqP7PdonE?auto=format&w=1000"
+                    />
+                  </CardHeader>
+                  <CardBody>
+                    <Row>
+                      <Col className="text-center" md="12">
+                        <h4 className="text-uppercase">Toxic Baebee #4</h4>
+                        <hr className="line-info" />
+                      </Col>
+                    </Row>
+                  </CardBody>
+                  <CardFooter className="text-center">
+                    <Button className="btn-simple" color="info">
+                      View Collection
+                    </Button>
+                  </CardFooter>
+                </Card>
+              </Col>
+              <Col md="4">
+                <Card className="card-coin card-plain">
+                  <CardHeader>
+                    <img
+                      alt="..."
+                      className="img-center img-fluid"
+                      src="https://i.seadn.io/gae/Yst4YG30_k7JxMUJ0E8g9jvdfEHz19Sxioye0L59VxifdtbWRiipnv062qwaRvlL9_C2fKxA8VmfjtjJ8VIb627wmmHQdr_rBh28dw?auto=format&w=1000"
+                    />
+                  </CardHeader>
+                  <CardBody>
+                    <Row>
+                      <Col className="text-center" md="12">
+                        <h4 className="text-uppercase">
+                          Pixelated Toxic Baebee #4
+                        </h4>
+                        <hr className="line-success" />
+                      </Col>
+                    </Row>
+                  </CardBody>
+                  <CardFooter className="text-center">
+                    <Button className="btn-simple" color="success">
+                      View Collection
+                    </Button>
+                  </CardFooter>
+                </Card>
+              </Col>
+              <Col md="4">
+                <Card className="card-coin card-plain">
+                  <CardHeader>
+                    <img
+                      alt="..."
+                      className="img-center img-fluid"
+                      src="https://i.seadn.io/gae/tWeVD95U92BTHewJVhuJKEKGlPqhPnYreD4sPgRSyqtvLe8Al4WqNQxVVnF-LK3i24DrGg5fhBDsYXlUtV_Oww6t3kVz25bfFuvB?auto=format&w=1000"
+                    />
+                  </CardHeader>
+                  <CardBody>
+                    <Row>
+                      <Col className="text-center" md="12">
+                        <h4 className="text-uppercase">Toxic Baebee #5</h4>
+                        <hr className="line-warning" />
+                      </Col>
+                    </Row>
+                  </CardBody>
+                  <CardFooter className="text-center">
+                    <Button className="btn-simple" color="warning">
+                      View Collection
+                    </Button>
+                  </CardFooter>
+                </Card>
+              </Col>
+            </Row>
+          </Container>
+        </section>
   );
 }

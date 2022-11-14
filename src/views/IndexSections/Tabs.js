@@ -16,202 +16,153 @@
 
 */
 import React from "react";
-import classnames from "classnames";
 // reactstrap components
 import {
-  TabContent,
-  TabPane,
   Container,
   Row,
   Col,
   Card,
-  CardHeader,
   CardBody,
-  Nav,
-  NavItem,
-  NavLink
+  CardTitle
 } from "reactstrap";
 
 export default function Tabs() {
-  const [iconTabs, setIconsTabs] = React.useState(1);
-  const [textTabs, setTextTabs] = React.useState(4);
   return (
-    <div className="section section-tabs">
-      <Container>
-        <div className="title">
-          <h3 className="mb-3">Navigation Tabs</h3>
-        </div>
-        <Row>
-          <Col className="ml-auto mr-auto" md="10" xl="6">
-            <div className="mb-3">
-              <small className="text-uppercase font-weight-bold">
-                With icons
-              </small>
-            </div>
-            <Card>
-              <CardHeader>
-                <Nav className="nav-tabs-info" role="tablist" tabs>
-                  <NavItem>
-                    <NavLink
-                      className={classnames({
-                        active: iconTabs === 1
-                      })}
-                      onClick={(e) => setIconsTabs(1)}
-                      href="#pablo"
-                    >
-                      <i className="tim-icons icon-spaceship" />
-                      Profile
-                    </NavLink>
-                  </NavItem>
-                  <NavItem>
-                    <NavLink
-                      className={classnames({
-                        active: iconTabs === 2
-                      })}
-                      onClick={(e) => setIconsTabs(2)}
-                      href="#pablo"
-                    >
-                      <i className="tim-icons icon-settings-gear-63" />
-                      Settings
-                    </NavLink>
-                  </NavItem>
-                  <NavItem>
-                    <NavLink
-                      className={classnames({
-                        active: iconTabs === 3
-                      })}
-                      onClick={(e) => setIconsTabs(3)}
-                      href="#pablo"
-                    >
-                      <i className="tim-icons icon-bag-16" />
-                      Options
-                    </NavLink>
-                  </NavItem>
-                </Nav>
-              </CardHeader>
-              <CardBody>
-                <TabContent className="tab-space" activeTab={"link" + iconTabs}>
-                  <TabPane tabId="link1">
-                    <p>
-                      Collaboratively administrate empowered markets via
-                      plug-and-play networks. Dynamically procrastinate B2C
-                      users after installed base benefits. <br />
-                      <br />
-                      Dramatically visualize customer directed convergence
-                      without revolutionary ROI.
-                    </p>
-                  </TabPane>
-                  <TabPane tabId="link2">
-                    <p>
-                      Completely synergize resource taxing relationships via
-                      premier niche markets. Professionally cultivate one-to-one
-                      customer service with robust ideas. <br />
-                      <br />
-                      Dynamically innovate resource-leveling customer service
-                      for state of the art customer service.
-                    </p>
-                  </TabPane>
-                  <TabPane tabId="link3">
-                    <p>
-                      Efficiently unleash cross-media information without
-                      cross-media value. Quickly maximize timely deliverables
-                      for real-time schemas. <br />
-                      <br />
-                      Dramatically maintain clicks-and-mortar solutions without
-                      functional solutions.
-                    </p>
-                  </TabPane>
-                </TabContent>
-              </CardBody>
-            </Card>
-          </Col>
-          <Col className="ml-auto mr-auto" md="10" xl="6">
-            <div className="mb-3">
-              <small className="text-uppercase font-weight-bold">
-                With text
-              </small>
-            </div>
-            <Card>
-              <CardHeader>
-                <Nav className="nav-tabs-info" role="tablist" tabs>
-                  <NavItem>
-                    <NavLink
-                      className={classnames({
-                        active: textTabs === 4
-                      })}
-                      onClick={(e) => setTextTabs(4)}
-                      href="#pablo"
-                    >
-                      Profile
-                    </NavLink>
-                  </NavItem>
-                  <NavItem>
-                    <NavLink
-                      className={classnames({
-                        active: textTabs === 5
-                      })}
-                      onClick={(e) => setTextTabs(5)}
-                      href="#pablo"
-                    >
-                      Settings
-                    </NavLink>
-                  </NavItem>
-                  <NavItem>
-                    <NavLink
-                      className={classnames({
-                        active: textTabs === 6
-                      })}
-                      onClick={(e) => setTextTabs(6)}
-                      href="#pablo"
-                    >
-                      Options
-                    </NavLink>
-                  </NavItem>
-                </Nav>
-              </CardHeader>
-              <CardBody>
-                <TabContent className="tab-space" activeTab={"link" + textTabs}>
-                  <TabPane tabId="link4">
-                    <p>
-                      These cases are perfectly simple and easy to distinguish.
-                      In a free hour, when our power of choice is untrammelled
-                      and when nothing prevents our being able to do what we
-                      like best, every pleasure is to be welcomed and every pain
-                      avoided. <br />
-                      But in certain circumstances and owing to the claims of
-                      duty or the obligations of business it will frequently
-                      occur that pleasures
-                    </p>
-                  </TabPane>
-                  <TabPane tabId="link5">
-                    <p>
-                      I will be the leader of a company that ends up being worth
-                      billions of dollars, because I got the answers. I
-                      understand culture. I am the nucleus. I think that’s a
-                      responsibility that I have, to push possibilities, to show
-                      people, this is the level that things could be at. I think
-                      that’s a responsibility that I have, to push
-                      possibilities, to show people, this is the level that
-                      things could be at.
-                    </p>
-                  </TabPane>
-                  <TabPane tabId="link6">
-                    <p>
-                      I think that’s a responsibility that I have, to push
-                      possibilities, to show people, this is the level that
-                      things could be at. So when you get something that has the
-                      name Kanye West on it, it’s supposed to be pushing the
-                      furthest possibilities. I will be the leader of a company
-                      that ends up being worth billions of dollars, because I
-                      got the answers. I understand culture. I am the nucleus.
-                    </p>
-                  </TabPane>
-                </TabContent>
-              </CardBody>
-            </Card>
-          </Col>
-        </Row>
-      </Container>
-    </div>
+    <section className="section section-lg">
+          <section className="section">
+            <img
+              alt="..."
+              className="path"
+              src={require("assets/img/path4.png")}
+            />
+            <Container stlye={{ marginBottom: "30vh" }}>
+              <Row className="row-grid justify-content-between">
+                  <Col md="12">
+                    <div className="pl-md-5">
+                      <h1>Specifications</h1>
+                    </div>
+                  </Col>
+                  <Row>
+                    <Col className="px-2 py-2" lg="12" sm="12">
+                      <Card className="card-stats">
+                        <CardBody>
+                          <Row>
+                            <Col md="4" xs="5">
+                              <div className="icon-big text-center icon-warning">
+                                <img
+                                  style={{ height: "5vh", width: "5vh" }}
+                                  alt={"toxic baebees"}
+                                  src={require("./userw.png")}
+                                />
+                              </div>
+                            </Col>
+                            <Col md="8" xs="7">
+                              <div className="numbers">
+                                <CardTitle
+                                  tag="p"
+                                  style={{ textAlign: "left" }}
+                                >
+                                  The Characters
+                                </CardTitle>
+
+                                <p
+                                  className="card-category"
+                                  style={{ textAlign: "left" }}
+                                >
+                                  Each unique Baebee is designed by our creative
+                                  team that generates over 170 Possible traits.
+                                  These include but are not limited to
+                                  expression, headwear, and clothing. We
+                                  developed 4000 Toxic Baebees are 2D, 1000
+                                  Toxic Baebee are Pixelated, And 7 Limited
+                                  Toxic Baebee Edition are 3D.
+                                </p>
+                              </div>
+                            </Col>
+                          </Row>
+                        </CardBody>
+                      </Card>
+                    </Col>
+                    <Col className="px-2 py-2" lg="12" sm="12">
+                      <Card className="card-stats">
+                        <CardBody>
+                          <Row>
+                            <Col md="4" xs="5">
+                              <div className="icon-big text-center icon-warning">
+                                <img
+                                  style={{ height: "5vh", width: "5vh" }}
+                                  alt={"toxic baebees"}
+                                  src={require("./polygonw.png")}
+                                />
+                              </div>
+                            </Col>
+                            <Col md="8" xs="7">
+                              <div className="numbers">
+                                <CardTitle
+                                  tag="p"
+                                  style={{ textAlign: "left" }}
+                                >
+                                  ERC-721
+                                </CardTitle>
+                                <p />
+                                <p
+                                  className="card-category"
+                                  style={{ textAlign: "left" }}
+                                >
+                                  The Baebees NFT Contract that governs
+                                  ownership is a standard ERC-721 compatible
+                                  with any service or exchange. Purchasing
+                                  Baebee NFT costs 25/50 MATIC - POLYGON, and 3D
+                                  costs 0.2 ETH.
+                                </p>
+                              </div>
+                            </Col>
+                          </Row>
+                        </CardBody>
+                      </Card>
+                    </Col>
+                    <Col className="px-2 py-2" lg="12" sm="12">
+                      <Card className="card-stats">
+                        <CardBody>
+                          <Row>
+                            <Col md="4" xs="5">
+                              <div className="icon-big text-center icon-warning">
+                                <img
+                                  style={{ height: "5vh", width: "5vh" }}
+                                  alt={"toxic baebees"}
+                                  src={require("./cardw.png")}
+                                />
+                              </div>
+                            </Col>
+                            <Col md="8" xs="7">
+                              <div className="numbers">
+                                <CardTitle
+                                  tag="p"
+                                  style={{ textAlign: "left" }}
+                                >
+                                  Utility
+                                </CardTitle>
+                                <p />
+                                <p
+                                  className="card-category"
+                                  style={{ textAlign: "left" }}
+                                >
+                                  {" "}
+                                  Baebees NFTs are exchangeable for ReautyCoin
+                                  (ERC-20 Token). We allow our NFT owner to
+                                  convert their NFT To our ReautyCoin. Please
+                                  check the ReautyDAO page to learn more.
+                                </p>
+                              </div>
+                            </Col>
+                          </Row>
+                        </CardBody>
+                      </Card>
+                    </Col>
+                  </Row>
+              </Row>
+            </Container>
+          </section>
+        </section>
   );
 }
