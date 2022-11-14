@@ -58,8 +58,7 @@ export default function PageHeader() {
                 <div className="btn-wrapper">
                   <div className="button-container">
                     <Button
-                      className="nav-link d-none d-lg-block"
-                      color="primary"
+                      color="primary" style={{marginTop: "3vh "}}
                     >
                       <i className="tim-icons icon-spaceship" /> MINT - x MATIC
                     </Button>

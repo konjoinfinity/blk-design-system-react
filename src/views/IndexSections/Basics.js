@@ -45,7 +45,6 @@ export default function Basics() {
                   <div className="btn-wrapper">
                     <div className="button-container">
                       <Button
-                        className="nav-link d-none d-lg-block"
                         color="primary"
                       >
                         <i className="tim-icons icon-spaceship" /> MINT - x

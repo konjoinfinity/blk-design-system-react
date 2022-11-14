@@ -76,9 +76,6 @@ export default function IndexNavbar() {
   width: "6vh",
   padding: "1vh" }} src={require("./reauty-logo.png")} alt="test"></img>
           </NavbarBrand>
-          <UncontrolledTooltip placement="bottom" target="navbar-brand">
-            Designed and Coded by Creative Tim
-          </UncontrolledTooltip>
           <button
             aria-expanded={collapseOpen}
             className="navbar-toggler navbar-toggler"
@@ -100,7 +97,7 @@ export default function IndexNavbar() {
             <Row>
               <Col className="collapse-brand" xs="6">
                 <a href="#pablo" onClick={(e) => e.preventDefault()}>
-                  BLK•React
+                  ReautyDAO
                 </a>
               </Col>
               <Col className="collapse-close text-right" xs="6">
