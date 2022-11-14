@@ -17,7 +17,7 @@
 */
 import React from "react";
 // reactstrap components
-import { Container, Row, Col } from "reactstrap";
+import { Container, Row, Col, Button } from "reactstrap";
 
 export default function Typography() {
   return (
@@ -34,9 +34,17 @@ export default function Typography() {
                         <div className="icon icon-primary">
                           <img src={require("./3d.gif")} alt="unreal" />
                         </div>
-                        <h4 className="info-title">Reauty DAO</h4>
-                        <hr className="line-primary" />
-                        <p>
+                        <div className="btn-wrapper">
+                  <div className="button-container">
+                    <Button
+                      color="primary">
+                      <i className="tim-icons icon-spaceship" /> Purchase on Opensea
+                    </Button>
+                  </div>
+                </div>
+                        {/* <h4 className="info-title">Reauty DAO</h4> */}
+                        {/* <hr className="line-primary" /> */}
+                        {/* <p>
                           Reauty DAO community empowers all members with
                           ownership, control, and monetization of their
                           beauty-relevant data. Overall, community members have
@@ -49,7 +57,7 @@ export default function Typography() {
                           community is vital for every beauty stakeholder
                           worldwide, and we're excited to lead this disruptive
                           beauty transformation.
-                        </p>
+                        </p> */}
                       </div>
                     </Col>
                     <Col lg="3">
@@ -57,9 +65,17 @@ export default function Typography() {
                         <div className="icon icon-warning">
                           <img src={require("./3d1.gif")} alt="Vampire" />
                         </div>
-                        <h4 className="info-title">Why NFTs?</h4>
-                        <hr className="line-warning" />
-                        <p>
+                        {/* <h4 className="info-title">Why NFTs?</h4> */}
+                        {/* <hr className="line-warning" /> */}
+                        <div className="btn-wrapper">
+                  <div className="button-container">
+                    <Button
+                      color="primary">
+                      <i className="tim-icons icon-spaceship" /> Purchase on Opensea
+                    </Button>
+                  </div>
+                </div>
+                        {/* <p>
                           The beauty industry needs to do better. We see
                           firsthand how misleading marketing claims, exaggerated
                           claims, and unrealistic expectations lead to unhealthy
@@ -69,7 +85,7 @@ export default function Typography() {
                           you can choose the best look. This NFT series will
                           help raise awareness of the toxic beauty industry
                           while empowering consumers to make healthier choices.
-                        </p>
+                        </p> */}
                       </div>
                     </Col>
                     <Col lg="3">
@@ -77,11 +93,19 @@ export default function Typography() {
                         <div className="icon icon-success">
                           <img src={require("./3d3.gif")} alt="Zombie" />
                         </div>
-                        <h4 className="info-title">
+                        <div className="btn-wrapper">
+                  <div className="button-container">
+                    <Button
+                      color="primary">
+                      <i className="tim-icons icon-spaceship" /> Purchase on Opensea
+                    </Button>
+                  </div>
+                </div>
+                        {/* <h4 className="info-title">
                           NFT Purchase = DAO Membership
-                        </h4>
-                        <hr className="line-success" />
-                        <p>
+                        </h4> */}
+                        {/* <hr className="line-success" /> */}
+                        {/* <p>
                           It's Halloween season, and we're celebrating by
                           slashing prices on Toxic Baebee NFTs from midnight on
                           31st Oct 2022 until 30th Nov 2022!
@@ -92,7 +116,7 @@ export default function Typography() {
                           all the community privileges and powers to improve the
                           web3 beauty community. Don't miss out on this spooky
                           deal!
-                        </p>
+                        </p> */}
                       </div>
                     </Col>
                   </Row>

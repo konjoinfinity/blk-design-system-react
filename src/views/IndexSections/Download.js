@@ -117,7 +117,7 @@ export default function Download() {
                     <img
                       alt="..."
                       className="img-center img-fluid"
-                      src="https://i.seadn.io/gae/_v-_d-QcL3fB2j96ZxUopcsHwr5WljtdzqIBRp42HRqlq-66d0Fp71aUfKPvhrzX6AoCRP6rc_rIEwqWsoZeRr-uqrWRm6zqP7PdonE?auto=format&w=1000"
+                      src="https://i.seadn.io/gae/aPg03dyRekQ37GGxOSUXZMtv4KgTTdP3Gu2Z6WjtjDRbLgtq-RAgU3zJu9QAQeNlLHMoec2gKQqdz7AtosLDSDp3zUVGsLZa7ZPscg?auto=format&w=1000"
                     />
                   </CardHeader>
                   <CardBody>
@@ -141,7 +141,7 @@ export default function Download() {
                     <img
                       alt="..."
                       className="img-center img-fluid"
-                      src="https://i.seadn.io/gae/Yst4YG30_k7JxMUJ0E8g9jvdfEHz19Sxioye0L59VxifdtbWRiipnv062qwaRvlL9_C2fKxA8VmfjtjJ8VIb627wmmHQdr_rBh28dw?auto=format&w=1000"
+                      src="https://i.seadn.io/gae/kZ6lOfyMfWLeV6XF4DaQ5IDot0b1i6brMq6SyoMUmiSWt3a1eNLhdIq8tl1FjF3tvzgOxVbhRT998RvvFijZyUFLAMPyrxQxxHbcSQ?auto=format&w=1000"
                     />
                   </CardHeader>
                   <CardBody>
@@ -167,7 +167,7 @@ export default function Download() {
                     <img
                       alt="..."
                       className="img-center img-fluid"
-                      src="https://i.seadn.io/gae/tWeVD95U92BTHewJVhuJKEKGlPqhPnYreD4sPgRSyqtvLe8Al4WqNQxVVnF-LK3i24DrGg5fhBDsYXlUtV_Oww6t3kVz25bfFuvB?auto=format&w=1000"
+                      src="https://i.seadn.io/gae/1FB7wzleeD6z_3w6mKO6AFQIdYaAlQVkU0kRlFDNSFAm3MFn2mQjgW6ciPlSVj05nLt9VbPvAiSef-ZClbWsrrbvt6QnWT6WorYm?auto=format&w=1000"
                     />
                   </CardHeader>
                   <CardBody>
@@ -193,7 +193,7 @@ export default function Download() {
                     <img
                       alt="..."
                       className="img-center img-fluid"
-                      src="https://i.seadn.io/gae/_v-_d-QcL3fB2j96ZxUopcsHwr5WljtdzqIBRp42HRqlq-66d0Fp71aUfKPvhrzX6AoCRP6rc_rIEwqWsoZeRr-uqrWRm6zqP7PdonE?auto=format&w=1000"
+                      src="https://i.seadn.io/gae/kelXuNv6UZxFH89glmV2VfV4B0lKHkf-hugpXKGVIWjB1SCfTGmQQRwbPo76jNg7HTmLah0VzsYNUFEdshdzjKDZRlxLiQH_ewSXLQ?auto=format&w=1000"
                     />
                   </CardHeader>
                   <CardBody>
@@ -217,7 +217,7 @@ export default function Download() {
                     <img
                       alt="..."
                       className="img-center img-fluid"
-                      src="https://i.seadn.io/gae/Yst4YG30_k7JxMUJ0E8g9jvdfEHz19Sxioye0L59VxifdtbWRiipnv062qwaRvlL9_C2fKxA8VmfjtjJ8VIb627wmmHQdr_rBh28dw?auto=format&w=1000"
+                      src="https://i.seadn.io/gae/JMQvNe-FfHV-brDs5FFdoVSr8QvUkd-P0jRjmR_8JEDOLFHM6Cp017wyw2ESUhC4qVdMIhycp37ZNU1u2KiKDczRHS3XyExDPbqL?auto=format&w=1000"
                     />
                   </CardHeader>
                   <CardBody>
@@ -243,7 +243,7 @@ export default function Download() {
                     <img
                       alt="..."
                       className="img-center img-fluid"
-                      src="https://i.seadn.io/gae/tWeVD95U92BTHewJVhuJKEKGlPqhPnYreD4sPgRSyqtvLe8Al4WqNQxVVnF-LK3i24DrGg5fhBDsYXlUtV_Oww6t3kVz25bfFuvB?auto=format&w=1000"
+                      src="https://i.seadn.io/gae/05vPImS1AbUoJlERfli5dZP1xNPJM8qf_LZdZbLKh1641WanVeTefRFH7qGh0N6Yc5RokFT0LrgU7fy0znVcjlqDupJuG_GSOAgL8gY?auto=format&w=1000"
                     />
                   </CardHeader>
                   <CardBody>

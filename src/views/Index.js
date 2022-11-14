@@ -28,6 +28,7 @@ import Tabs from "views/IndexSections/Tabs.js";
 import Notifications from "views/IndexSections/Notifications.js";
 import Typography from "views/IndexSections/Typography.js";
 import Download from "views/IndexSections/Download.js";
+import JavaScript from "./IndexSections/JavaScript";
 
 export default function Index() {
   React.useEffect(() => {
@@ -46,6 +47,7 @@ export default function Index() {
           <Tabs />
           <Notifications />
           <Typography />
+          <JavaScript />
           <Download />
         </div>
         <Footer />
