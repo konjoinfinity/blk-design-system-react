@@ -24,7 +24,6 @@ import {
   NavbarBrand,
   Navbar,
   NavItem,
-  NavLink,
   Nav,
   Container,
   Row,
@@ -32,7 +31,6 @@ import {
 } from "reactstrap";
 import { useDispatch, useSelector } from "react-redux";
 import { fetchData } from "../PageHeader/redux/data/dataActions";
-import { connect } from "../PageHeader/redux/blockchain/blockchainActions";
 
 export default function IndexNavbar() {
   const dispatch = useDispatch();
@@ -164,36 +162,19 @@ export default function IndexNavbar() {
             </Row>
           </div>
           <Nav navbar>
-            {/* <NavItem className="p-0">
-              <NavLink tag={Link} to="/register-page">
-                <i className="tim-icons icon-bullet-list-67" />
-                Beauty Baebees
-              </NavLink>
-            </NavItem>
-            <NavItem className="p-0">
-              <NavLink tag={Link} to="/landing-page">
-                <i className="tim-icons icon-image-02" />
-                Pixelated Beauty Baebees
-              </NavLink>
-            </NavItem>
-            <NavItem className="p-0">
-              <NavLink tag={Link} to="/profile-page">
-                <i className="tim-icons icon-single-02" />
-                Profile Page
-              </NavLink>
-            </NavItem> */}
             <NavItem>
             {blockchain.account === "" || blockchain.smartContract === null ? (
           <Button
         color="primary"
         variant="contained"
         size="medium"
-        onClick={(e) => {
-          e.preventDefault();
-          dispatch(connect());
-          getData();
-        }}>
-        Connect Wallet
+        // onClick={(e) => {
+        //   e.preventDefault();
+        //   dispatch(connect());
+        //   getData();
+        // }}
+        >
+        No Wallet Connected
       </Button>
           ) : (
       <Button
