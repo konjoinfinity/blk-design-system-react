@@ -18,6 +18,7 @@
 import React from "react";
 // reactstrap components
 import { Container, Card, CardBody, CardTitle } from "reactstrap";
+import styles from './Tabs.css';
 
 export default function Tabs() {
   return (
@@ -26,25 +27,13 @@ export default function Tabs() {
         <img alt="..." className="path" src={require("assets/img/path4.png")} />
         <h1 style={{ textAlign: "center", padding: "10vh"}}>Specifications</h1>
         <Container style={{marginBottom: "10vh"}}>
-          <div
-            style={{
-              display: "flex",
-              justifyContent: "space-between",
-              alignItems: "center",
-              flexDirection: "row",
-            
-            }}
-          >
+          <div className="specs" style={styles}>
             <img
               alt={"toxic baebees"}
               src={require("./toxbbs.png")}
-              style={{ height: "55vh", marginRight: "2vh" }}
+              style={{ height: "55vh", margin: "1vh" }}
             />
-
-      
-            
-
-            <Card className="card-stats" style={{ marginRight: "2vh", height: "50vh"}}>
+            <Card className="card-stats" style={{ margin: "1vh", height: "auto"}}>
               <CardBody>
                 <div className="icon-big text-center icon-warning">
                   <img
@@ -70,7 +59,7 @@ export default function Tabs() {
               </CardBody>
             </Card>
 
-            <Card className="card-stats" style={{ marginRight: "2vh", height: "50vh"}}>
+            <Card className="card-stats" style={{ margin: "1vh", height: "auto"}}>
               <CardBody>
                 <div className="icon-big text-center icon-warning">
                   <img
@@ -95,7 +84,7 @@ export default function Tabs() {
               </CardBody>
             </Card>
 
-            <Card className="card-stats" style={{ height: "50vh"}}>
+            <Card className="card-stats" style={{ height: "auto", margin: "1vh"}}>
               <CardBody>
                 <div className="icon-big text-center icon-warning">
                   <img
