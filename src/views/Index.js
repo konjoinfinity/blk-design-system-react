@@ -23,7 +23,6 @@ import PageHeader from "components/PageHeader/PageHeader.js";
 import Footer from "components/Footer/Footer.js";
 
 // sections for this page/view
-import Basics from "views/IndexSections/Basics.js";
 import Tabs from "views/IndexSections/Tabs.js";
 import Notifications from "views/IndexSections/Notifications.js";
 import Typography from "views/IndexSections/Typography.js";
@@ -43,7 +42,6 @@ export default function Index() {
       <IndexNavbar />
         <PageHeader />
         <div className="main">
-          <Basics />
           <Tabs />
           <Notifications />
           <Typography />

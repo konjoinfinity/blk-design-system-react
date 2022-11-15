@@ -17,152 +17,111 @@
 */
 import React from "react";
 // reactstrap components
-import {
-  Container,
-  Row,
-  Col,
-  Card,
-  CardBody,
-  CardTitle
-} from "reactstrap";
+import { Container, Card, CardBody, CardTitle } from "reactstrap";
 
 export default function Tabs() {
   return (
     <section className="section section-lg">
-          <section className="section">
+      <section className="section">
+        <img alt="..." className="path" src={require("assets/img/path4.png")} />
+        <h1 style={{ textAlign: "center", padding: "10vh"}}>Specifications</h1>
+        <Container style={{marginBottom: "10vh"}}>
+          <div
+            style={{
+              display: "flex",
+              justifyContent: "space-between",
+              alignItems: "center",
+              flexDirection: "row",
+            
+            }}
+          >
             <img
-              alt="..."
-              className="path"
-              src={require("assets/img/path4.png")}
+              alt={"toxic baebees"}
+              src={require("./toxbbs.png")}
+              style={{ height: "55vh", marginRight: "2vh" }}
             />
-            <Container stlye={{ marginBottom: "30vh" }}>
-              <Row className="row-grid justify-content-between">
-                  <Col md="12">
-                    <div className="pl-md-5">
-                      <h1>Specifications</h1>
-                    </div>
-                  </Col>
-                  <Row>
-                    <Col className="px-2 py-2" lg="12" sm="12">
-                      <Card className="card-stats">
-                        <CardBody>
-                          <Row>
-                            <Col md="4" xs="5">
-                              <div className="icon-big text-center icon-warning">
-                                <img
-                                  style={{ height: "5vh", width: "5vh" }}
-                                  alt={"toxic baebees"}
-                                  src={require("./userw.png")}
-                                />
-                              </div>
-                            </Col>
-                            <Col md="8" xs="7">
-                              <div className="numbers">
-                                <CardTitle
-                                  tag="p"
-                                  style={{ textAlign: "left" }}
-                                >
-                                  The Characters
-                                </CardTitle>
 
-                                <p
-                                  className="card-category"
-                                  style={{ textAlign: "left" }}
-                                >
-                                  Each unique Baebee is designed by our creative
-                                  team that generates over 170 Possible traits.
-                                  These include but are not limited to
-                                  expression, headwear, and clothing. We
-                                  developed 4000 Toxic Baebees are 2D, 1000
-                                  Toxic Baebee are Pixelated, And 7 Limited
-                                  Toxic Baebee Edition are 3D.
-                                </p>
-                              </div>
-                            </Col>
-                          </Row>
-                        </CardBody>
-                      </Card>
-                    </Col>
-                    <Col className="px-2 py-2" lg="12" sm="12">
-                      <Card className="card-stats">
-                        <CardBody>
-                          <Row>
-                            <Col md="4" xs="5">
-                              <div className="icon-big text-center icon-warning">
-                                <img
-                                  style={{ height: "5vh", width: "5vh" }}
-                                  alt={"toxic baebees"}
-                                  src={require("./polygonw.png")}
-                                />
-                              </div>
-                            </Col>
-                            <Col md="8" xs="7">
-                              <div className="numbers">
-                                <CardTitle
-                                  tag="p"
-                                  style={{ textAlign: "left" }}
-                                >
-                                  ERC-721
-                                </CardTitle>
-                                <p />
-                                <p
-                                  className="card-category"
-                                  style={{ textAlign: "left" }}
-                                >
-                                  The Baebees NFT Contract that governs
-                                  ownership is a standard ERC-721 compatible
-                                  with any service or exchange. Purchasing
-                                  Baebee NFT costs 25/50 MATIC - POLYGON, and 3D
-                                  costs 0.2 ETH.
-                                </p>
-                              </div>
-                            </Col>
-                          </Row>
-                        </CardBody>
-                      </Card>
-                    </Col>
-                    <Col className="px-2 py-2" lg="12" sm="12">
-                      <Card className="card-stats">
-                        <CardBody>
-                          <Row>
-                            <Col md="4" xs="5">
-                              <div className="icon-big text-center icon-warning">
-                                <img
-                                  style={{ height: "5vh", width: "5vh" }}
-                                  alt={"toxic baebees"}
-                                  src={require("./cardw.png")}
-                                />
-                              </div>
-                            </Col>
-                            <Col md="8" xs="7">
-                              <div className="numbers">
-                                <CardTitle
-                                  tag="p"
-                                  style={{ textAlign: "left" }}
-                                >
-                                  Utility
-                                </CardTitle>
-                                <p />
-                                <p
-                                  className="card-category"
-                                  style={{ textAlign: "left" }}
-                                >
-                                  {" "}
-                                  Baebees NFTs are exchangeable for ReautyCoin
-                                  (ERC-20 Token). We allow our NFT owner to
-                                  convert their NFT To our ReautyCoin. Please
-                                  check the ReautyDAO page to learn more.
-                                </p>
-                              </div>
-                            </Col>
-                          </Row>
-                        </CardBody>
-                      </Card>
-                    </Col>
-                  </Row>
-              </Row>
-            </Container>
-          </section>
-        </section>
+      
+            
+
+            <Card className="card-stats" style={{ marginRight: "2vh", height: "50vh"}}>
+              <CardBody>
+                <div className="icon-big text-center icon-warning">
+                  <img
+                    style={{ height: "5vh", width: "5vh" }}
+                    alt={"toxic baebees"}
+                    src={require("./userw.png")}
+                  />
+                </div>
+
+                <div className="numbers">
+                  <CardTitle tag="p" style={{ textAlign: "left" }}>
+                    Characters
+                  </CardTitle>
+
+                  <p className="card-category" style={{ textAlign: "left" }}>
+                    Each unique Baebee is designed by our creative team that
+                    generates over 170 Possible traits. These include but are
+                    not limited to expression, headwear, and clothing. We
+                    developed 4000 Toxic Baebees are 2D, 1000 Toxic Baebee are
+                    Pixelated, And 7 Limited Toxic Baebee Edition are 3D.
+                  </p>
+                </div>
+              </CardBody>
+            </Card>
+
+            <Card className="card-stats" style={{ marginRight: "2vh", height: "50vh"}}>
+              <CardBody>
+                <div className="icon-big text-center icon-warning">
+                  <img
+                    style={{ height: "5vh", width: "5vh" }}
+                    alt={"toxic baebees"}
+                    src={require("./polygonw.png")}
+                  />
+                </div>
+
+                <div className="numbers">
+                  <CardTitle tag="p" style={{ textAlign: "left" }}>
+                    ERC-721
+                  </CardTitle>
+                  <p />
+                  <p className="card-category" style={{ textAlign: "left" }}>
+                    The Baebees NFT Contract that governs ownership is a
+                    standard ERC-721 compatible with any service or exchange.
+                    Purchasing Baebee NFT costs 25/50 MATIC - POLYGON, and 3D
+                    costs 0.2 ETH.
+                  </p>
+                </div>
+              </CardBody>
+            </Card>
+
+            <Card className="card-stats" style={{ height: "50vh"}}>
+              <CardBody>
+                <div className="icon-big text-center icon-warning">
+                  <img
+                    style={{ height: "5vh", width: "5vh" }}
+                    alt={"toxic baebees"}
+                    src={require("./cardw.png")}
+                  />
+                </div>
+
+                <div className="numbers">
+                  <CardTitle tag="p" style={{ textAlign: "left" }}>
+                    Utility
+                  </CardTitle>
+                  <p />
+                  <p className="card-category" style={{ textAlign: "left" }}>
+                    {" "}
+                    Baebees NFTs are exchangeable for ReautyCoin (ERC-20 Token).
+                    We allow our NFT owner to convert their NFT To our
+                    ReautyCoin. Please check the ReautyDAO page to learn more.
+                  </p>
+                </div>
+              </CardBody>
+            </Card>
+          </div>
+        </Container>
+      </section>
+    </section>
   );
 }

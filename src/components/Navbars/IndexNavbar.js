@@ -15,7 +15,7 @@
 * The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
 
 */
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 // reactstrap components
 import {
@@ -28,20 +28,73 @@ import {
   Nav,
   Container,
   Row,
-  Col,
-  UncontrolledTooltip
+  Col
 } from "reactstrap";
+import { useDispatch, useSelector } from "react-redux";
+import { fetchData } from "../PageHeader/redux/data/dataActions";
+import { connect } from "../PageHeader/redux/blockchain/blockchainActions";
 
 export default function IndexNavbar() {
+  const dispatch = useDispatch();
+  const blockchain = useSelector((state) => state.blockchain);
   const [collapseOpen, setCollapseOpen] = React.useState(false);
   const [collapseOut, setCollapseOut] = React.useState("");
   const [color, setColor] = React.useState("navbar-transparent");
+  const [CONFIG, SET_CONFIG] = useState({
+    CONTRACT_ADDRESS: "",
+    SCAN_LINK: "",
+    NETWORK: {
+      NAME: "",
+      SYMBOL: "",
+      ID: 0,
+    },
+    NFT_NAME: "",
+    SYMBOL: "",
+    MAX_SUPPLY: 1,
+    WEI_COST: 0,
+    DISPLAY_COST: 0,
+    GAS_LIMIT: 0,
+    MARKETPLACE: "",
+    MARKETPLACE_LINK: "",
+    SHOW_BACKGROUND: false,
+  });
+
   React.useEffect(() => {
     window.addEventListener("scroll", changeColor);
     return function cleanup() {
       window.removeEventListener("scroll", changeColor);
     };
   }, []);
+
+  const getData = () => {
+    if (blockchain.account !== "" && blockchain.smartContract !== null) {
+      dispatch(fetchData(blockchain.account));
+    }
+  };
+
+  const getConfig = async () => {
+    const configResponse = await fetch("/config/config.json", {
+      headers: {
+        "Content-Type": "application/json",
+        Accept: "application/json",
+      },
+    });
+    const config = await configResponse.json();
+    SET_CONFIG(config);
+    console.log(CONFIG.CONTRACT_ADDRESS)
+  };
+
+  useEffect(() => {
+    getConfig();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
+
+  useEffect(() => {
+    getData();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [blockchain.account]);
+
+
   const changeColor = () => {
     if (
       document.documentElement.scrollTop > 99 ||
@@ -131,10 +184,26 @@ export default function IndexNavbar() {
               </NavLink>
             </NavItem>
             <NavItem>
+            {blockchain.account === "" || blockchain.smartContract === null ? (
           <Button
-        color="primary">
+        color="primary"
+        variant="contained"
+        size="medium"
+        onClick={(e) => {
+          e.preventDefault();
+          dispatch(connect());
+          getData();
+        }}>
         Connect Wallet
       </Button>
+          ) : (
+      <Button
+        color="primary"
+        variant="contained"
+        size="medium">
+        Connected to {blockchain.account ? blockchain.account.substring(0, 4) : ""}...{blockchain.account ? blockchain.account.substring(blockchain.account.length - 4) : ""}
+      </Button>
+          )}
             </NavItem>
           </Nav>
         </Collapse>

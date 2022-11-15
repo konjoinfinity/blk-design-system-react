@@ -41,6 +41,7 @@ export default function LandingPage() {
       document.body.classList.toggle("landing-page");
     };
   }, []);
+
   return (
     <>
       <ExamplesNavbar />

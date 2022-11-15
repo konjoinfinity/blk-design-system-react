@@ -21,7 +21,7 @@ import { Row, Col, Container } from "reactstrap";
 
 export default function Notifications() {
   return (
-    <div>
+    <div style={{marginBottom: "10vh"}}>
     <Container>
             <Row className="justify-content-center">
               <Col lg="12">

@@ -23,7 +23,7 @@ export default function Typography() {
   return (
     <section className="section section-lg section-safe">
             <Container>
-              <Row className="justify-content-center">
+              <Row className="justify-content-center" style={{marginBottom: "10vh"}}>
                 <Col lg="12">
                   <h1 className="text-center">
                     3D TOXIC BAEBEES - LIMITED EDITION
@@ -36,28 +36,12 @@ export default function Typography() {
                         </div>
                         <div className="btn-wrapper">
                   <div className="button-container">
-                    <Button
+                    <Button style={{margin: "3vh"}}
                       color="primary">
                       <i className="tim-icons icon-spaceship" /> Purchase on Opensea
                     </Button>
                   </div>
                 </div>
-                        {/* <h4 className="info-title">Reauty DAO</h4> */}
-                        {/* <hr className="line-primary" /> */}
-                        {/* <p>
-                          Reauty DAO community empowers all members with
-                          ownership, control, and monetization of their
-                          beauty-relevant data. Overall, community members have
-                          the power to build a new order in the beauty industry
-                          with transparency, inclusiveness, and authenticity
-                          supported by blockchain technology!
-                          <br />
-                          <br />
-                          Creating a truly decentralized and trustworthy beauty
-                          community is vital for every beauty stakeholder
-                          worldwide, and we're excited to lead this disruptive
-                          beauty transformation.
-                        </p> */}
                       </div>
                     </Col>
                     <Col lg="3">
@@ -65,27 +49,14 @@ export default function Typography() {
                         <div className="icon icon-warning">
                           <img src={require("./3d1.gif")} alt="Vampire" />
                         </div>
-                        {/* <h4 className="info-title">Why NFTs?</h4> */}
-                        {/* <hr className="line-warning" /> */}
                         <div className="btn-wrapper">
                   <div className="button-container">
-                    <Button
+                    <Button style={{margin: "3vh"}}
                       color="primary">
                       <i className="tim-icons icon-spaceship" /> Purchase on Opensea
                     </Button>
                   </div>
                 </div>
-                        {/* <p>
-                          The beauty industry needs to do better. We see
-                          firsthand how misleading marketing claims, exaggerated
-                          claims, and unrealistic expectations lead to unhealthy
-                          choices for our customers. That's why we're launching
-                          the first NFT series: Toxic Baebaee! Each variation is
-                          entirely customizable with 3D, Pixelated, and 2D so
-                          you can choose the best look. This NFT series will
-                          help raise awareness of the toxic beauty industry
-                          while empowering consumers to make healthier choices.
-                        </p> */}
                       </div>
                     </Col>
                     <Col lg="3">
@@ -95,28 +66,12 @@ export default function Typography() {
                         </div>
                         <div className="btn-wrapper">
                   <div className="button-container">
-                    <Button
+                    <Button style={{margin: "3vh"}}
                       color="primary">
                       <i className="tim-icons icon-spaceship" /> Purchase on Opensea
                     </Button>
                   </div>
                 </div>
-                        {/* <h4 className="info-title">
-                          NFT Purchase = DAO Membership
-                        </h4> */}
-                        {/* <hr className="line-success" /> */}
-                        {/* <p>
-                          It's Halloween season, and we're celebrating by
-                          slashing prices on Toxic Baebee NFTs from midnight on
-                          31st Oct 2022 until 30th Nov 2022!
-                          <br />
-                          <br />
-                          The first 100 Toxic Baebee NFT owners will get 0.1 ETH
-                          worth of Reauty DAO membership, giving them access to
-                          all the community privileges and powers to improve the
-                          web3 beauty community. Don't miss out on this spooky
-                          deal!
-                        </p> */}
                       </div>
                     </Col>
                   </Row>
