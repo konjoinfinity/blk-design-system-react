@@ -58,6 +58,8 @@ export default function PageHeader() {
     const blockchain = useSelector((state) => state.blockchain);
     const data = useSelector((state) => state.data);
     const [claimingNFT, setClaimingNFT] = useState(false);
+    const [show2Dmint, setShow2Dmint] = useState(true);
+  const [showPixelmint, setShowPixelmint] = useState(true);
     const [feedback, setFeedback] = useState(
       `Click to mint your Beauty Baebee NFT`
     );
@@ -84,8 +86,17 @@ export default function PageHeader() {
     const onDismiss = () => setVisible(false);
     const onTrigger = () => setVisible(true);
 
-    const claimNFTs = async() => {
-        let cost = CONFIG.WEI_COST;
+    const claimNFTs = async(a) => {
+      let cost = 0;
+      let contractAddress = "";
+      if (a == true) {
+        cost = 50000000000000000000;
+        contractAddress = "0x527F243B04fcaDaA6f6244F65d451bDeA8cBFa92";
+      } else {
+        cost = CONFIG.WEI_COST;
+        contractAddress = CONFIG.CONTRACT_ADDRESS;
+      }
+        //let cost = CONFIG.WEI_COST;
       // let gasLimit = CONFIG.GAS_LIMIT;
       let gasLimit = lastBaseFeePerGas;
       let totalCostWei = String(cost * mintAmount);
@@ -102,15 +113,19 @@ export default function PageHeader() {
       const abi = await abiResponse.json();
       console.log(abi)
   var contract = new Contract(abi, CONFIG.CONTRACT_ADDRESS);
-  web3.eth.sendTransaction({
+  try {
+  await web3.eth.sendTransaction({
     from: blockchain.account,
-    to: CONFIG.CONTRACT_ADDRESS,
+    to: contractAddress,
     data: contract.methods.mint(mintAmount).encodeABI(),
     gasLimit: String(totalGasLimit),
     value: totalCostWei,
   }).once("error", (err) => {
+    if(visible === false){
+      onTrigger();
+    } 
+    setFeedback(err.message);
       console.log(err);
-      setFeedback("Sorry, something went wrong please try again later.");
       setClaimingNFT(false);
     })
     .then((receipt) => {
@@ -123,6 +138,9 @@ export default function PageHeader() {
       dispatch(fetchData(blockchain.account));
       console.log(blockchain);
     });
+  } catch(err) {
+console.log(err)
+  }
     };
   
     const decrementMintAmount = () => {
@@ -144,6 +162,9 @@ export default function PageHeader() {
     const getData = async() => {
       if (blockchain.account !== "" && blockchain.smartContract !== null) {
         dispatch(fetchData(blockchain.account));
+        setFeedback("Wallet connected, click 'MINT' to mint an NFT.");
+        console.log(show2Dmint)
+        console.log(showPixelmint)
       }
       // window.open("https://metamask.app.link/send/0x12E4c6b6Be904055FF15283C82bE1d941a427f7A@137?value=5e19");
       var isSafari = window.safari !== undefined;
@@ -183,9 +204,8 @@ export default function PageHeader() {
     useEffect(() => {
       getData();
       // eslint-disable-next-line react-hooks/exhaustive-deps
-    }, [blockchain.account]);
+    }, [blockchain.account]); 
   
-
   return (
     <div>
     <div className="page-header header-filter">
@@ -200,8 +220,9 @@ export default function PageHeader() {
       <div className="content-center">
             <Row className="row-grid justify-content-between align-items-center text-left">
               <Col lg="6" md="6">
+              <div style={{ display: "flex", alignItems:"center", justifyContent: "center", flexDirection: "column"}}>
                 <h1 className="h1-seo">TOXIC BAEBEE NFTS</h1>
-                <p className="text-white mb-1">
+                <p className="text-white mb-1" style={{textAlign: "center"}}>
                   The beauty industry lacks transparency and regulation. Beauty
                   consumers are frustrated with misleading information And
                   exaggerated marketing claims.
@@ -216,6 +237,8 @@ export default function PageHeader() {
                   The "Toxic Baebee" NFT Series was designed to generate public
                   awareness by illustrating the "Toxic Side Of Beauty."
                 </p>
+                </div>
+                {show2Dmint == true ? (
                 <div>
       {Number(data.totalSupply) >= CONFIG.MAX_SUPPLY ? (
         <>
@@ -245,7 +268,7 @@ export default function PageHeader() {
           <br />
           <br />
           {blockchain.account === "" || blockchain.smartContract === null ? (
-            <div ai={"center"} jc={"center"}>
+            <div style={{ display: "flex", alignItems:"center", justifyContent: "center"}}>
               {blockchain.errorMsg !== "" ? (
                 <>
                     <Alert color="info" isOpen={visible} toggle={onDismiss}>{blockchain.errorMsg}</Alert>
@@ -257,8 +280,9 @@ export default function PageHeader() {
               size="large"
                 onClick={(e) => {
                   e.preventDefault();
-                  dispatch(connect());
+                  dispatch(connect(false));
                   getData();
+                  setShowPixelmint(false)
                   if(visible === false){
                     onTrigger();
                   } 
@@ -269,7 +293,6 @@ export default function PageHeader() {
             </div>
           ) : (
             <>
-              <p>
                 {feedback !== `Click to mint your Beauty Baebee NFT` ? <Alert color="info" isOpen={visible} toggle={onDismiss}>
                 {feedback}</Alert> : ""}
                 {txreceipt !== "" ? (
@@ -282,7 +305,6 @@ export default function PageHeader() {
                 ) : (
                   ""
                 )}
-              </p>
               <br />
                {/* eslint-disable-next-line */}
               <div style={{alignItems: "center", justifyContent: "center", flexDirection: "row", display: "flex", justifyContent: "space-evenly"}}>
@@ -327,6 +349,10 @@ export default function PageHeader() {
                     e.preventDefault();
                     claimNFTs(false);
                     getData();
+                    setFeedback("Approve transaction to mint")
+                    if(visible === false){
+                      onTrigger();
+                    } 
                   }}
                 >
                   {claimingNFT ? "MINTING..." : `MINT - ${25*mintAmount} MATIC`}
@@ -334,9 +360,11 @@ export default function PageHeader() {
               </div>
             </>
           )}
+                
         </>
       )}
     </div>
+                ) : ("")}
               </Col>
               <Col lg="4" md="5">
                 <img
@@ -356,12 +384,13 @@ export default function PageHeader() {
         <div className="squares square-2" />
         <div className="squares square-3" />
         <div className="squares square-4" />
-        <Row className="row-grid justify-content-between align-items-center">
+        <Row className="row-grid justify-content-between align-items-center text-left">
           <Col lg="6">
-            <h3 className="display-3 text-white">
+          <div style={{ display: "flex", alignItems:"center", justifyContent: "center", flexDirection: "column"}}>
+            <h3 className="display-3 text-white" style={{textAlign: "center"}}>
             PIXELATED TOXIC BAEBEE NFTS
             </h3>
-            <p className="text-white mb-3">
+            <p className="text-white mb-3" style={{textAlign: "center"}}>
             We're so excited to introduce our new pixelated Toxic Baebee
                   NFT series - Limited to 1000 total NFTs, The Pixelated
                   variation better illustrates the beauty industry's lack of
@@ -370,6 +399,9 @@ export default function PageHeader() {
                   that risk our health. This NFT series aims to raise
                   awareness of "Toxic Side of Beauty."
             </p>
+            </div>
+            {showPixelmint == true ? (
+            <div>
             {Number(data.totalSupply) >= CONFIG.MAX_SUPPLY ? (
         <>
           <p
@@ -398,7 +430,7 @@ export default function PageHeader() {
           <br />
           <br />
           {blockchain.account === "" || blockchain.smartContract === null ? (
-            <div ai={"center"} jc={"center"}>
+            <div style={{ display: "flex", alignItems:"center", justifyContent: "center"}}>
               {blockchain.errorMsg !== "" ? (
                 <>
                     <Alert color="info" isOpen={visible} toggle={onDismiss}>{blockchain.errorMsg}</Alert>
@@ -410,8 +442,9 @@ export default function PageHeader() {
               size="large"
                 onClick={(e) => {
                   e.preventDefault();
-                  dispatch(connect());
+                  dispatch(connect(true));
                   getData();
+                  setShow2Dmint(false);
                   if(visible === false){
                     onTrigger();
                   } 
@@ -422,7 +455,6 @@ export default function PageHeader() {
             </div>
           ) : (
             <>
-              <p>
                 {feedback !== `Click to mint your Beauty Baebee NFT` ? <Alert color="info" isOpen={visible} toggle={onDismiss}>
                 {feedback}</Alert> : ""}
                 {txreceipt !== "" ? (
@@ -435,7 +467,6 @@ export default function PageHeader() {
                 ) : (
                   ""
                 )}
-              </p>
               <br />
                {/* eslint-disable-next-line */}
               <div style={{alignItems: "center", justifyContent: "center", flexDirection: "row", display: "flex", justifyContent: "space-evenly"}}>
@@ -478,8 +509,12 @@ export default function PageHeader() {
                   disabled={claimingNFT ? true : false}
                   onClick={(e) => {
                     e.preventDefault();
-                    claimNFTs(false);
+                    claimNFTs(true);
                     getData();
+                    setFeedback("Approve transaction to mint")
+                    if(visible === false){
+                      onTrigger();
+                    } 
                   }}
                 >
                   {claimingNFT ? "MINTING..." : `MINT - ${50*mintAmount} MATIC`}
@@ -489,8 +524,10 @@ export default function PageHeader() {
           )}
         </>
       )}
+      </div>
+            ) :("")}
           </Col>
-          <Col className="mb-lg-auto" lg="6">
+          <Col lg="4" md="5">
               <img
                   style={{ height: "30vh", width: "30vh" }}
                   alt={"toxic baebees"}

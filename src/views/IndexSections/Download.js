@@ -53,7 +53,7 @@ export default function Download() {
                     </Row>
                   </CardBody>
                   <CardFooter className="text-center">
-                    <Button className="btn-simple" color="primary">
+                    <Button  color="primary" href="https://opensea.io/collection/toxic-baebee-nft-series" tag="a">
                       View Collection
                     </Button>
                   </CardFooter>
@@ -79,7 +79,8 @@ export default function Download() {
                     </Row>
                   </CardBody>
                   <CardFooter className="text-center">
-                    <Button className="btn-simple" color="info">
+                    <Button  color="info" href="https://opensea.io/collection/toxic-baebee-pixelated" tag="a">
+               
                       View Collection
                     </Button>
                   </CardFooter>
@@ -103,7 +104,7 @@ export default function Download() {
                     </Row>
                   </CardBody>
                   <CardFooter className="text-center">
-                    <Button className="btn-simple" color="success">
+                    <Button  color="success" href="https://opensea.io/collection/toxic-baebee-nft-series" tag="a">
                       View Collection
                     </Button>
                   </CardFooter>
@@ -123,13 +124,13 @@ export default function Download() {
                   <CardBody>
                     <Row>
                       <Col className="text-center" md="12">
-                        <h4 className="text-uppercase">Toxic Baebee #2</h4>
+                        <h4 className="text-uppercase">Pixelated Toxic Baebee #2</h4>
                         <hr className="line-warning" />
                       </Col>
                     </Row>
                   </CardBody>
                   <CardFooter className="text-center">
-                    <Button className="btn-simple" color="warning">
+                    <Button  color="warning" href="https://opensea.io/collection/toxic-baebee-pixelated" tag="a">
                       View Collection
                     </Button>
                   </CardFooter>
@@ -148,14 +149,14 @@ export default function Download() {
                     <Row>
                       <Col className="text-center" md="12">
                         <h4 className="text-uppercase">
-                          Pixelated Toxic Baebee #3
+                          Toxic Baebee #3
                         </h4>
                         <hr className="line-danger" />
                       </Col>
                     </Row>
                   </CardBody>
                   <CardFooter className="text-center">
-                    <Button className="btn-simple" color="danger">
+                    <Button  color="danger" href="https://opensea.io/collection/toxic-baebee-nft-series" tag="a">
                       View Collection
                     </Button>
                   </CardFooter>
@@ -173,13 +174,13 @@ export default function Download() {
                   <CardBody>
                     <Row>
                       <Col className="text-center" md="12">
-                        <h4 className="text-uppercase">Toxic Baebee #3</h4>
-                        <hr className="line-primary" />
+                        <h4 className="text-uppercase">Pixelated Toxic Baebee #3</h4>
+                        <hr className="line-default" />
                       </Col>
                     </Row>
                   </CardBody>
                   <CardFooter className="text-center">
-                    <Button className="btn-simple" color="primary">
+                    <Button  color="default" href="https://opensea.io/collection/toxic-baebee-pixelated" tag="a">
                       View Collection
                     </Button>
                   </CardFooter>
@@ -205,7 +206,7 @@ export default function Download() {
                     </Row>
                   </CardBody>
                   <CardFooter className="text-center">
-                    <Button className="btn-simple" color="info">
+                    <Button  color="info" href="https://opensea.io/collection/toxic-baebee-nft-series" tag="a">
                       View Collection
                     </Button>
                   </CardFooter>
@@ -231,7 +232,7 @@ export default function Download() {
                     </Row>
                   </CardBody>
                   <CardFooter className="text-center">
-                    <Button className="btn-simple" color="success">
+                    <Button  color="success" href="https://opensea.io/collection/toxic-baebee-pixelated" tag="a">
                       View Collection
                     </Button>
                   </CardFooter>
@@ -255,7 +256,7 @@ export default function Download() {
                     </Row>
                   </CardBody>
                   <CardFooter className="text-center">
-                    <Button className="btn-simple" color="warning">
+                    <Button  color="warning" href="https://opensea.io/collection/toxic-baebee-nft-series" tag="a">
                       View Collection
                     </Button>
                   </CardFooter>

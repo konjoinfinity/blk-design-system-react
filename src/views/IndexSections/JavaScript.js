@@ -26,7 +26,18 @@ import {
 
 export default function JavaScript() {
   return (
+    <div className="section section-signup">
+    <Container>
+        <div className="squares square-1" />
+        <div className="squares square-2" />
+        <div className="squares square-3" />
+        <div className="squares square-4" />
     <section className="section section-lg section-safe">
+    <img
+            alt="..."
+            className="path"
+            src={require("assets/img/path3.png")}
+          />
     <Container>
       <Row className="justify-content-center">
         <Col lg="12">
@@ -105,5 +116,7 @@ export default function JavaScript() {
       </Row>
     </Container>
   </section>
+  </Container>
+ </div>
   );
 }

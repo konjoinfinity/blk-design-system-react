@@ -22,6 +22,19 @@ import { Row, Col, Container } from "reactstrap";
 export default function Notifications() {
   return (
     <div style={{marginBottom: "10vh"}}>
+       <img
+            alt="..."
+            className="path"
+            src={require("assets/img/blob.png")}
+          />
+          <img
+            alt="..."
+            className="shapes triangle"
+            src={require("assets/img/triunghiuri.png")}
+          />
+         
+         
+          
     <Container>
             <Row className="justify-content-center">
               <Col lg="12">
@@ -88,6 +101,7 @@ export default function Notifications() {
               </Col>
             </Row>
           </Container>
+          
           <Container>
           <Row className="justify-content-center">
             <Col lg="12">
@@ -127,6 +141,11 @@ export default function Notifications() {
                     </p>
                   </div>
                 </Col>
+                <img
+            alt="..."
+            className="shapes circle"
+            src={require("assets/img/cercuri.png")}
+          />
                 <Col lg="3">
                   <div className="info">
                     <div className="icon icon-success">

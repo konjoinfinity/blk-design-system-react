@@ -94,7 +94,6 @@ export default function IndexNavbar() {
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [blockchain.account]);
 
-
   const changeColor = () => {
     if (
       document.documentElement.scrollTop > 99 ||
@@ -165,7 +164,7 @@ export default function IndexNavbar() {
             </Row>
           </div>
           <Nav navbar>
-            <NavItem className="p-0">
+            {/* <NavItem className="p-0">
               <NavLink tag={Link} to="/register-page">
                 <i className="tim-icons icon-bullet-list-67" />
                 Beauty Baebees
@@ -182,7 +181,7 @@ export default function IndexNavbar() {
                 <i className="tim-icons icon-single-02" />
                 Profile Page
               </NavLink>
-            </NavItem>
+            </NavItem> */}
             <NavItem>
             {blockchain.account === "" || blockchain.smartContract === null ? (
           <Button
