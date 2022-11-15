@@ -130,8 +130,10 @@ export const connect = () => {
         console.log(err)
       }
     } else {
-      dispatch(connectFailed("Install Metamask."));
-      // window.location.replace("https://metamask.app.link/dapp/baebee.reautydao.io");
+      dispatch(connectFailed("Install the Metamask browser extension or use the Metamask app browser."));
+      setTimeout(function(){
+        window.location.replace("https://metamask.app.link/dapp/toxicbaebeemint.reautydao.io/");
+    }, 3000);
     }
   };
 };
