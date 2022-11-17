@@ -342,7 +342,7 @@ export default function PageHeader() {
                             {txreceipt !== "" ? (
                               <a
                                 href={
-                                  "https://opensea.io/collection/beauty-baebee-nft"
+                                  "https://opensea.io/collection/toxic-baebee-nft-series"
                                 }
                                 rel="nofollow"
                               >
@@ -356,7 +356,7 @@ export default function PageHeader() {
                             <div
                               style={{
                                 alignItems: "center",
-                                justifyContent: "center",
+                                justifyContent: "space-evenly",
                                 flexDirection: "row",
                                 display: "flex",
                     
@@ -565,7 +565,7 @@ export default function PageHeader() {
                             {txreceipt !== "" ? (
                               <a
                                 href={
-                                  "https://opensea.io/collection/beauty-baebee-nft"
+                                  "https://opensea.io/collection/toxic-baebee-pixelated"
                                 }
                                 rel="nofollow"
                               >
@@ -579,7 +579,7 @@ export default function PageHeader() {
                             <div
                               style={{
                                 alignItems: "center",
-                                justifyContent: "center",
+                                justifyContent: "space-evenly",
                                 flexDirection: "row",
                                 display: "flex",
                               }}
