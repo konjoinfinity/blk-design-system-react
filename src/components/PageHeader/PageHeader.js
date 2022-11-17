@@ -29,6 +29,7 @@ import Contract from "web3-eth-contract";
 import Web3 from "web3";
 import { ethers } from "ethers";
 
+
 const { ethereum } = window;
 Contract.setProvider(ethereum);
 let web3 = new Web3(ethereum);
@@ -307,6 +308,7 @@ export default function PageHeader() {
                                 </Alert>
                               </>
                             ) : null}
+        
                             <br />
                             <Button
                               variant="contained"
@@ -351,6 +353,7 @@ export default function PageHeader() {
                             ) : (
                               ""
                             )}
+                            
                             <br />
                             {/* eslint-disable-next-line */}
                             <div
@@ -530,6 +533,7 @@ export default function PageHeader() {
                                 </Alert>
                               </>
                             ) : null}
+                          
                             <br />
                             <Button
                               variant="contained"
