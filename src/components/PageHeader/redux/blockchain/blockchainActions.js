@@ -65,12 +65,12 @@ export const connect = (nft) => {
     });
   }
     const CONFIG = await configResponse.json();
-    console.log(CONFIG)
-    console.log("json is loaded")
+    // console.log(CONFIG)
+    // console.log("json is loaded")
     const { ethereum } = window;
     const metamaskIsInstalled = ethereum && ethereum.isMetaMask;
     if (metamaskIsInstalled) {
-      console.log("metamask is installed")
+      // console.log("metamask is installed")
       Web3EthContract.setProvider(ethereum);
       let web3 = new Web3(ethereum);
       try {
@@ -80,16 +80,16 @@ export const connect = (nft) => {
         const networkId = await ethereum.request({
           method: "net_version",
         });
-        console.log(networkId)
-        console.log(CONFIG.NETWORK.ID)
+        // console.log(networkId)
+        // console.log(CONFIG.NETWORK.ID)
         // eslint-disable-next-line 
         if (networkId == CONFIG.NETWORK.ID) {
-          console.log("network ids match")
+          // console.log("network ids match")
           const SmartContractObj = new Web3EthContract(
             abi,
             CONFIG.CONTRACT_ADDRESS
           );
-          console.log(SmartContractObj)
+          // console.log(SmartContractObj)
           dispatch(
             connectSuccess({
               account: accounts[0],
@@ -105,7 +105,7 @@ export const connect = (nft) => {
             window.location.reload();
           });
           // Add listeners end
-          console.log("wallet connection success")
+          // console.log("wallet connection success")
         } else {
           dispatch(connectFailed(`Change network to ${CONFIG.NETWORK.NAME}.`));
           const chId = Web3.utils.toHex("137");
@@ -140,15 +140,16 @@ export const connect = (nft) => {
             //   window.location.reload();
             // });
             // Add listeners end
-            console.log("switched to MATIC network")
+            // console.log("switched to MATIC network")
           } else {
-            dispatch(connectFailed("Something went wrong."));
-            console.log("test")
+            dispatch(connectFailed("Connecting to the MATIC network..."));
+            dispatch(connect());
+            // console.log("test")
           }
         }
       } catch (err) {
         dispatch(connectFailed("Something went wrong."));
-        console.log(err)
+        // console.log(err)
       }
     } else {
       dispatch(connectFailed("Install the Metamask browser extension or use the Metamask app browser."));
