@@ -162,8 +162,8 @@ export default function PageHeader() {
       // console.log(showPixelmint);
     }
     // window.open("https://metamask.app.link/send/0x12E4c6b6Be904055FF15283C82bE1d941a427f7A@137?value=5e19");
-    var isSafari = window.safari !== undefined;
-    if (isSafari) // console.log("Safari, yeah!");
+    //var isSafari = window.safari !== undefined;
+    //if (isSafari) // console.log("Safari, yeah!");
   };
 
   const getConfig = async () => {
