@@ -16,8 +16,7 @@
 
 */
 
-import React, { useEffect, useState } from "react";
-// reactstrap components
+import React, { useEffect, useState, Suspense } from "react";
 import { Button, Container, Row, Col, Alert } from "reactstrap";
 
 import { useDispatch, useSelector } from "react-redux";
@@ -39,10 +38,7 @@ if (window.ethereum && window.ethereum.isMetaMask) {
 }
 
 let txreceipt = "";
-// let gasPrice = 0;
 let lastBaseFeePerGas = 0;
-// let maxFeePerGas = 0;
-// let maxPriorityFeePerGas = 0;
 
 export default function PageHeader() {
   const [visible, setVisible] = useState(true);
@@ -158,12 +154,7 @@ export default function PageHeader() {
     if (blockchain.account !== "" && blockchain.smartContract !== null) {
       dispatch(fetchData(blockchain.account));
       setFeedback("Wallet connected, click 'MINT' to mint an NFT.");
-      // console.log(show2Dmint);
-      // console.log(showPixelmint);
     }
-    // window.open("https://metamask.app.link/send/0x12E4c6b6Be904055FF15283C82bE1d941a427f7A@137?value=5e19");
-    //var isSafari = window.safari !== undefined;
-    //if (isSafari) // console.log("Safari, yeah!");
   };
 
   const getConfig = async () => {
@@ -182,29 +173,12 @@ export default function PageHeader() {
     async function getFee() {
       if (window.ethereum && window.ethereum.isMetaMask) {
         let feeData = await provider.getFeeData();
-        // console.log(feeData);
-        // gasPrice = Number(
-        //   String(web3.utils.toNumber(feeData.gasPrice._hex)).slice(0, -4)
-        // );
         lastBaseFeePerGas = Number(
           String(web3.utils.toNumber(feeData.lastBaseFeePerGas._hex)).slice(
             0,
             -4
           )
         );
-        // maxFeePerGas = Number(
-        //   String(web3.utils.toNumber(feeData.maxFeePerGas._hex)).slice(0, -4)
-        // );
-        // maxPriorityFeePerGas = Number(
-        //   String(web3.utils.toNumber(feeData.maxPriorityFeePerGas._hex)).slice(
-        //     0,
-        //     -4
-        //   )
-        // );
-        // console.log(gasPrice);
-        // console.log(lastBaseFeePerGas);
-        // console.log(maxFeePerGas);
-        // console.log(maxPriorityFeePerGas);
       }
     }
     getFee();
@@ -446,7 +420,7 @@ export default function PageHeader() {
           </div>
         </Container>
       </div>
-
+      <Suspense fallback={<div>Loading...</div>}>
       <div className="section section-signup">
         <Container>
           <div className="squares square-1" />
@@ -670,6 +644,7 @@ export default function PageHeader() {
             </Row>
         </Container>
       </div>
+      </Suspense>
     </div>
   );
 }
