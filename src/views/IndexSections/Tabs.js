@@ -30,7 +30,7 @@ export default function Tabs() {
           <div className="specs" style={styles}>
             <img
               alt={"toxic baebees"}
-              src={require("./toxbbs.png")}
+              src={require("./toxbbs.webp")}
               style={{ height: "55vh", margin: "1vh" }}
             />
             <Card className="card-stats" style={{ margin: "1vh", height: "auto"}}>
@@ -39,7 +39,7 @@ export default function Tabs() {
                   <img
                     style={{ height: "5vh", width: "5vh" }}
                     alt={"toxic baebees"}
-                    src={require("./userw.png")}
+                    src={require("./userw.webp")}
                   />
                 </div>
 
@@ -65,7 +65,7 @@ export default function Tabs() {
                   <img
                     style={{ height: "5vh", width: "5vh" }}
                     alt={"toxic baebees"}
-                    src={require("./polygonw.png")}
+                    src={require("./polygonw.webp")}
                   />
                 </div>
 
@@ -90,7 +90,7 @@ export default function Tabs() {
                   <img
                     style={{ height: "5vh", width: "5vh" }}
                     alt={"toxic baebees"}
-                    src={require("./cardw.png")}
+                    src={require("./cardw.webp")}
                   />
                 </div>
 

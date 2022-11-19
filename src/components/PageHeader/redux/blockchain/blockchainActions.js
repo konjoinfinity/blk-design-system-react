@@ -35,6 +35,7 @@ export const connect = (nft) => {
     let abiResponse = {};
     let abi = {};
     let configResponse = {};
+    // eslint-disable-next-line
     if(nft == false) {
     abiResponse = await fetch("/config/abi.json", {
       headers: {

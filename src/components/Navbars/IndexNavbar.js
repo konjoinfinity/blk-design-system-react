@@ -79,7 +79,7 @@ export default function IndexNavbar() {
     });
     const config = await configResponse.json();
     SET_CONFIG(config);
-    // console.log(CONFIG.CONTRACT_ADDRESS)
+    console.log(CONFIG.CONTRACT_ADDRESS)
   };
 
   useEffect(() => {

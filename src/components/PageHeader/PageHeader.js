@@ -39,10 +39,10 @@ if (window.ethereum && window.ethereum.isMetaMask) {
 }
 
 let txreceipt = "";
-let gasPrice = 0;
+// let gasPrice = 0;
 let lastBaseFeePerGas = 0;
-let maxFeePerGas = 0;
-let maxPriorityFeePerGas = 0;
+// let maxFeePerGas = 0;
+// let maxPriorityFeePerGas = 0;
 
 export default function PageHeader() {
   const [visible, setVisible] = useState(true);
@@ -183,24 +183,24 @@ export default function PageHeader() {
       if (window.ethereum && window.ethereum.isMetaMask) {
         let feeData = await provider.getFeeData();
         // console.log(feeData);
-        gasPrice = Number(
-          String(web3.utils.toNumber(feeData.gasPrice._hex)).slice(0, -4)
-        );
+        // gasPrice = Number(
+        //   String(web3.utils.toNumber(feeData.gasPrice._hex)).slice(0, -4)
+        // );
         lastBaseFeePerGas = Number(
           String(web3.utils.toNumber(feeData.lastBaseFeePerGas._hex)).slice(
             0,
             -4
           )
         );
-        maxFeePerGas = Number(
-          String(web3.utils.toNumber(feeData.maxFeePerGas._hex)).slice(0, -4)
-        );
-        maxPriorityFeePerGas = Number(
-          String(web3.utils.toNumber(feeData.maxPriorityFeePerGas._hex)).slice(
-            0,
-            -4
-          )
-        );
+        // maxFeePerGas = Number(
+        //   String(web3.utils.toNumber(feeData.maxFeePerGas._hex)).slice(0, -4)
+        // );
+        // maxPriorityFeePerGas = Number(
+        //   String(web3.utils.toNumber(feeData.maxPriorityFeePerGas._hex)).slice(
+        //     0,
+        //     -4
+        //   )
+        // );
         // console.log(gasPrice);
         // console.log(lastBaseFeePerGas);
         // console.log(maxFeePerGas);

@@ -51,7 +51,7 @@ export default function PaginationSection() {
                                 <img
                                   style={{ height: "5vh", width: "5vh" }}
                                   alt={"toxic baebees"}
-                                  src={require("./userw.png")}
+                                  src={require("./userw.webp")}
                                 />
                               </div>
                               Characters

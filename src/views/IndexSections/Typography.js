@@ -38,7 +38,7 @@ export default function Typography() {
                     <Col lg="3">
                       <div className="info">
                         <div className="icon icon-primary">
-                          <img src={require("./unreal3d.png")} alt="unreal" />
+                          <img src={require("./unreal3d.webp")} alt="unreal" />
                         </div>
                         <h4 className="info-title">Unreal Baebee</h4>
                       <hr className="line-primary" />
@@ -55,7 +55,7 @@ export default function Typography() {
                     <Col lg="3">
                       <div className="info">
                         <div className="icon icon-warning">
-                          <img src={require("./cond3d.png")} alt="Vampire" />
+                          <img src={require("./cond3d.webp")} alt="Vampire" />
                         </div>
                         <h4 className="info-title">Contaminated Baebee</h4>
                       <hr className="line-warning" />
@@ -72,7 +72,7 @@ export default function Typography() {
                     <Col lg="3">
                       <div className="info">
                         <div className="icon icon-success">
-                          <img src={require("./poisoned3d.png")} alt="Zombie" />
+                          <img src={require("./poisoned3d.webp")} alt="Zombie" />
                           <h4 className="info-title">Poisoned Baebee</h4>
                       <hr className="line-success" />
                         </div>
@@ -92,7 +92,7 @@ export default function Typography() {
                 <Col lg="3">
                       <div className="info">
                         <div className="icon icon-success">
-                          <img src={require("./frida3d2.png")} alt="Mask" />
+                          <img src={require("./frida3d2.webp")} alt="Mask" />
                           <h4 className="info-title">Mask Baebee</h4>
                     <hr className="line-danger" />
                         </div>
@@ -110,7 +110,7 @@ export default function Typography() {
                     <Col lg="3">
                       <div className="info">
                         <div className="icon icon-success">
-                          <img src={require("./joke3d.png")} alt="Joker" />
+                          <img src={require("./joke3d.webp")} alt="Joker" />
                           <h4 className="info-title">Joker Baebee</h4>
                     <hr className="line-info" />
                         </div>
@@ -127,7 +127,7 @@ export default function Typography() {
                     <Col lg="3">
                       <div className="info">
                         <div className="icon icon-success">
-                          <img src={require("./Fire3d.png")} alt="Fire" />
+                          <img src={require("./Fire3d.webp")} alt="Fire" />
                           <h4 className="info-title">Fire Baebee</h4>
                     <hr className="line-default" />
                         </div>

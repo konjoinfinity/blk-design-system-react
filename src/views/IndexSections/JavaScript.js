@@ -48,7 +48,7 @@ export default function JavaScript() {
             <Col lg="3">
               <div className="info">
                 <div className="icon icon-primary">
-                  <img src={require("./daow.png")} alt="dao" style={{height: "10vh", width: "10vh"}}/>
+                  <img src={require("./daow.webp")} alt="dao" style={{height: "10vh", width: "10vh"}}/>
                 </div>
                 <h4 className="info-title">Reauty DAO</h4>
                 <hr className="line-primary" />
@@ -71,7 +71,7 @@ export default function JavaScript() {
             <Col lg="3">
               <div className="info">
                 <div className="icon icon-warning">
-                  <img src={require("./nftwh.png")} alt="nft" style={{height: "10vh", width: "10vh"}}/>
+                  <img src={require("./nftwh.webp")} alt="nft" style={{height: "10vh", width: "10vh"}}/>
                 </div>
                 <h4 className="info-title">Why NFTs?</h4>
                 <hr className="line-warning" />
@@ -91,7 +91,7 @@ export default function JavaScript() {
             <Col lg="3">
               <div className="info">
                 <div className="icon icon-success">
-                  <img src={require("./memberw.png")} alt="membership" style={{height: "10vh", width: "10vh"}}/>
+                  <img src={require("./memberw.webp")} alt="membership" style={{height: "10vh", width: "10vh"}}/>
                 </div>
                 <h4 className="info-title">
                   NFT Purchase = DAO Membership

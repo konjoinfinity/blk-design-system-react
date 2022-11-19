@@ -91,19 +91,19 @@ export default function Footer() {
                 color="primary"
                 href="https://reautydao.io"
               >
-                <i class="fa-solid fa-globe"/>
+                <i className="fa-solid fa-globe"/>
               </Button>
               <Button
                 color="success"
                 href="https://reautydao.io/"
               >
-                <i class="fa-brands fa-discord"/>
+                <i className="fa-brands fa-discord"/>
               </Button>
               <Button
                 color="warning"
                 href="https://www.instagram.com/reautyapp/"
               >
-                <i class="fa-brands fa-instagram"/>
+                <i className="fa-brands fa-instagram"/>
               </Button>
             </div>
           </Col>

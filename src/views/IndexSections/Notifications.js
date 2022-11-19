@@ -43,7 +43,7 @@ export default function Notifications() {
                   <Col lg="3">
                     <div className="info">
                       <div className="icon icon-primary">
-                        <img src={require("./Unreal.png")} alt="unreal" />
+                        <img src={require("./Unreal.webp")} alt="unreal" />
                       </div>
                       <h4 className="info-title">Unreal Baebee</h4>
                       <hr className="line-primary" />
@@ -62,7 +62,7 @@ export default function Notifications() {
                   <Col lg="3">
                     <div className="info">
                       <div className="icon icon-warning">
-                        <img src={require("./Vampire.png")} alt="Vampire" />
+                        <img src={require("./Vampire.webp")} alt="Vampire" />
                       </div>
                       <h4 className="info-title">Contaminated Baebee</h4>
                       <hr className="line-warning" />
@@ -80,7 +80,7 @@ export default function Notifications() {
                   <Col lg="3">
                     <div className="info">
                       <div className="icon icon-success">
-                        <img src={require("./Zombie.png")} alt="Zombie" />
+                        <img src={require("./Zombie.webp")} alt="Zombie" />
                       </div>
                       <h4 className="info-title">Poisoned Baebee</h4>
                       <hr className="line-success" />
@@ -109,7 +109,7 @@ export default function Notifications() {
                 <Col lg="3">
                   <div className="info">
                     <div className="icon icon-primary">
-                      <img src={require("./Frida1.png")} alt="Frida" />
+                      <img src={require("./Frida1.webp")} alt="Frida" />
                     </div>
                     <h4 className="info-title">Mask Baebee</h4>
                     <hr className="line-primary" />
@@ -127,7 +127,7 @@ export default function Notifications() {
                 <Col lg="3">
                   <div className="info">
                     <div className="icon icon-warning">
-                      <img src={require("./Clown.png")} alt="clown" />
+                      <img src={require("./Clown.webp")} alt="clown" />
                     </div>
                     <h4 className="info-title">Joker Baebee</h4>
                     <hr className="line-warning" />
@@ -149,7 +149,7 @@ export default function Notifications() {
                 <Col lg="3">
                   <div className="info">
                     <div className="icon icon-success">
-                      <img src={require("./Fire.png")} alt="fire" />
+                      <img src={require("./Fire.webp")} alt="fire" />
                     </div>
                     <h4 className="info-title">Fire Baebee</h4>
                     <hr className="line-success" />
