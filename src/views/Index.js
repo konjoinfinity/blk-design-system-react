@@ -9,15 +9,16 @@
 =========================================================
 * The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
 */
-import React from "react";
+import React, { Suspense } from 'react';
 import IndexNavbar from "components/Navbars/IndexNavbar.js";
 import PageHeader from "components/PageHeader/PageHeader.js";
-import Footer from "components/Footer/Footer.js";
-import Tabs from "views/IndexSections/Tabs.js";
-import Notifications from "views/IndexSections/Notifications.js";
-import Typography from "views/IndexSections/Typography.js";
-import Download from "views/IndexSections/Download.js";
-import JavaScript from "./IndexSections/JavaScript";
+
+const Tabs = React.lazy(() => import('views/IndexSections/Tabs.js'));
+const Notifications = React.lazy(() => import('views/IndexSections/Notifications.js'));
+const Typography = React.lazy(() => import('views/IndexSections/Typography.js'));
+const JavaScript = React.lazy(() => import('./IndexSections/JavaScript'));
+const Download = React.lazy(() => import('views/IndexSections/Download.js'));
+const Footer = React.lazy(() => import('components/Footer/Footer.js'));
 
 export default function Index() {
   React.useEffect(() => {
@@ -31,6 +32,7 @@ export default function Index() {
     <>
       <IndexNavbar />
         <PageHeader />
+        <Suspense fallback={<div>Loading...</div>}>
         <div className="main">
           <Tabs />
           <Notifications />
@@ -39,6 +41,7 @@ export default function Index() {
           <Download />
         </div>
         <Footer />
+        </Suspense>
     </>
   );
 }

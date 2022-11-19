@@ -9,7 +9,7 @@
 =========================================================
 * The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
 */
-import React from "react";
+import React, { Suspense } from 'react';
 import ReactDOM from "react-dom/client";
 import { BrowserRouter, Route, Switch } from "react-router-dom";
 import "assets/css/nucleo-icons.css";
@@ -30,6 +30,7 @@ const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <Provider store={store}>
   <BrowserRouter>
+  <Suspense fallback={<div>Loading...</div>}>
     <Switch>
       <Route path="/" render={(props) => <Index {...props} />} />
       <Route
@@ -45,6 +46,7 @@ root.render(
         render={(props) => <ProfilePage {...props} />}
       />
     </Switch>
+    </Suspense>
   </BrowserRouter>
   </Provider>
 );
