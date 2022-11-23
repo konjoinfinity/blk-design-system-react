@@ -16,7 +16,6 @@
 
 */
 import React from "react";
-// reactstrap components
 import { Container, Card, CardBody, CardTitle } from "reactstrap";
 import styles from './Tabs.css';
 

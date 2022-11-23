@@ -16,9 +16,6 @@ import "assets/css/nucleo-icons.css";
 import "assets/scss/blk-design-system-react.scss";
 import "assets/demo/demo.css";
 import Index from "views/Index.js";
-import LandingPage from "views/examples/LandingPage.js";
-import RegisterPage from "views/examples/RegisterPage.js";
-import ProfilePage from "views/examples/ProfilePage.js";
 import * as buffer from "buffer";
 import { Provider } from "react-redux";
 import store from "./components/PageHeader/redux/store";
@@ -33,18 +30,6 @@ root.render(
   <Suspense fallback={<div>Loading...</div>}>
     <Switch>
       <Route path="/" render={(props) => <Index {...props} />} />
-      <Route
-        path="/landing-page"
-        render={(props) => <LandingPage {...props} />}
-      />
-      <Route
-        path="/register-page"
-        render={(props) => <RegisterPage {...props} />}
-      />
-      <Route
-        path="/profile-page"
-        render={(props) => <ProfilePage {...props} />}
-      />
     </Switch>
     </Suspense>
   </BrowserRouter>

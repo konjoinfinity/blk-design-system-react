@@ -85,8 +85,6 @@ export default function PageHeader() {
       cost = CONFIG.WEI_COST;
       contractAddress = CONFIG.CONTRACT_ADDRESS;
     }
-    //let cost = CONFIG.WEI_COST;
-    // let gasLimit = CONFIG.GAS_LIMIT;
     let gasLimit = lastBaseFeePerGas;
     let totalCostWei = String(cost * mintAmount);
     let totalGasLimit = String(gasLimit);
@@ -98,9 +96,7 @@ export default function PageHeader() {
         Accept: "application/json",
       },
     });
-    // console.log(abiResponse);
     const abi = await abiResponse.json();
-    // console.log(abi);
     var contract = new Contract(abi, CONFIG.CONTRACT_ADDRESS);
     try {
       await web3.eth
@@ -116,21 +112,18 @@ export default function PageHeader() {
             onTrigger();
           }
           setFeedback(err.message);
-          // console.log(err);
           setClaimingNFT(false);
         })
         .then((receipt) => {
-          // console.log(receipt);
           txreceipt = "data";
           setFeedback(
             `WOW, the ${CONFIG.NFT_NAME} is yours! go visit Opensea.io to view it ==> `
           );
           setClaimingNFT(false);
           dispatch(fetchData(blockchain.account));
-          // console.log(blockchain);
         });
     } catch (err) {
-      // console.log(err);
+      setFeedback(`${err}`);
     }
   };
 

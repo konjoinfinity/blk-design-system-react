@@ -16,7 +16,6 @@
 
 */
 import React from "react";
-// reactstrap components
 import {
   Collapse,
   DropdownToggle,

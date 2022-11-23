@@ -3689,6 +3689,7 @@ input[type="button"].btn-block {
   display: block;
   min-height: 1.3125rem;
   padding-left: 3rem;
+  // eslint-disable-next-line
   print-color-adjust: exact;
 }
 .custom-control-inline {

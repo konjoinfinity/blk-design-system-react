@@ -66,12 +66,9 @@ export const connect = (nft) => {
     });
   }
     const CONFIG = await configResponse.json();
-    // console.log(CONFIG)
-    // console.log("json is loaded")
     const { ethereum } = window;
     const metamaskIsInstalled = ethereum && ethereum.isMetaMask;
     if (metamaskIsInstalled) {
-      // console.log("metamask is installed")
       Web3EthContract.setProvider(ethereum);
       let web3 = new Web3(ethereum);
       try {
@@ -81,16 +78,12 @@ export const connect = (nft) => {
         const networkId = await ethereum.request({
           method: "net_version",
         });
-        // console.log(networkId)
-        // console.log(CONFIG.NETWORK.ID)
         // eslint-disable-next-line 
         if (networkId == CONFIG.NETWORK.ID) {
-          // console.log("network ids match")
           const SmartContractObj = new Web3EthContract(
             abi,
             CONFIG.CONTRACT_ADDRESS
           );
-          // console.log(SmartContractObj)
           dispatch(
             connectSuccess({
               account: accounts[0],
@@ -98,21 +91,18 @@ export const connect = (nft) => {
               web3: web3,
             })
           );
-          // Add listeners start
           ethereum.on("accountsChanged", (accounts) => {
             dispatch(updateAccount(accounts[0]));
           });
           ethereum.on("chainChanged", () => {
             window.location.reload();
           });
-          // Add listeners end
-          // console.log("wallet connection success")
         } else {
           dispatch(connectFailed(`Change network to ${CONFIG.NETWORK.NAME}.`));
           const chId = Web3.utils.toHex("137");
           await window.ethereum.request({
             method: "wallet_switchEthereumChain",
-            params: [{ chainId: chId }], // chainId must be in hexadecimal numbers
+            params: [{ chainId: chId }],
           });
           const accounts = await ethereum.request({
             method: "eth_requestAccounts",
@@ -133,24 +123,16 @@ export const connect = (nft) => {
                 web3: web3,
               })
             );
-            // Add listeners start
             ethereum.on("accountsChanged", (accounts) => {
               dispatch(updateAccount(accounts[0]));
             });
-            // ethereum.on("chainChanged", () => {
-            //   window.location.reload();
-            // });
-            // Add listeners end
-            // console.log("switched to MATIC network")
           } else {
             dispatch(connectFailed("Connecting to the POLYGON MATIC network..."));
             dispatch(connect());
             dispatch(connectFailed("Connected to POLYGON MATIC network"));
-            // console.log("test")
           }
         } 
       } catch (err) { 
-        console.log(err)
         // eslint-disable-next-line 
         if (err.code){
         dispatch(connectFailed("Adding the POLYGON MATIC network to Metamask..."));
@@ -191,13 +173,12 @@ export const connect = (nft) => {
                 web3: web3,
               })
             );
-            // Add listeners start
             ethereum.on("accountsChanged", (accounts) => {
               dispatch(updateAccount(accounts[0]));
             })
         })
         .catch((error) => {
-          console.log(error)
+          dispatch(connectFailed(`${error.message}`));
         }) 
       } else {
         dispatch(connectFailed(`${err.message}`));

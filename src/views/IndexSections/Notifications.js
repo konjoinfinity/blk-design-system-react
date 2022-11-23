@@ -16,7 +16,6 @@
 
 */
 import React from "react";
-// reactstrap components
 import { Row, Col, Container } from "reactstrap";
 
 export default function Notifications() {

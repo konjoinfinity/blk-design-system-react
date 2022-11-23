@@ -17,7 +17,6 @@
 */
 import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
-// reactstrap components
 import {
   Button,
   Collapse,
@@ -167,13 +166,7 @@ export default function IndexNavbar() {
           <Button
         color="primary"
         variant="contained"
-        size="medium"
-        // onClick={(e) => {
-        //   e.preventDefault();
-        //   dispatch(connect());
-        //   getData();
-        // }}
-        >
+        size="medium">
         No Wallet Connected
       </Button>
           ) : (
