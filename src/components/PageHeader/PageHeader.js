@@ -205,10 +205,10 @@ export default function PageHeader() {
                   }}
                 >
                   <h1 style={{marginTop: "5vh"}} className="h1-seo">TOXIC BAEBEE NFTS</h1>
-                  <p
-                    className="text-white mb-1"
-                    style={{ textAlign: "center" }}
-                  >
+                  {/* eslint-disable-next-line */}
+                  {showPixelmint == true ? (
+                  <p className="text-white mb-1"
+                    style={{ textAlign: "center" }}>
                     The beauty industry lacks transparency and regulation.
                     Beauty consumers are frustrated with misleading information
                     And exaggerated marketing claims.
@@ -223,6 +223,7 @@ export default function PageHeader() {
                     The "Toxic Baebee" NFT Series was designed to generate
                     public awareness by illustrating the "Toxic Side Of Beauty."
                   </p>
+                  ):("")}
                 </div>
                 {/* eslint-disable-next-line */}
                 {show2Dmint == true ? (
@@ -436,10 +437,10 @@ export default function PageHeader() {
                   >
                     PIXELATED TOXIC BAEBEE NFTS
                   </h3>
-                  <p
-                    className="text-white mb-3"
-                    style={{ textAlign: "center" }}
-                  >
+                  {/* eslint-disable-next-line */}
+                  {show2Dmint == true ? (
+                  <p className="text-white mb-3"
+                    style={{ textAlign: "center" }}>
                     We're so excited to introduce our new pixelated Toxic Baebee
                     NFT series - Limited to 1000 total NFTs, The Pixelated
                     variation better illustrates the beauty industry's lack of
@@ -448,6 +449,7 @@ export default function PageHeader() {
                     that risk our health. This NFT series aims to raise
                     awareness of "Toxic Side of Beauty."
                   </p>
+                  ):("")}
                 </div>
                 {/* eslint-disable-next-line */}
                 {showPixelmint == true ? (
