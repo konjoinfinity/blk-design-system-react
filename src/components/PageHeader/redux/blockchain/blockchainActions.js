@@ -143,14 +143,65 @@ export const connect = (nft) => {
             // Add listeners end
             // console.log("switched to MATIC network")
           } else {
-            dispatch(connectFailed("Connecting to the MATIC network..."));
+            dispatch(connectFailed("Connecting to the POLYGON MATIC network..."));
             dispatch(connect());
+            dispatch(connectFailed("Connected to POLYGON MATIC network"));
             // console.log("test")
           }
-        }
-      } catch (err) {
-        dispatch(connectFailed("Something went wrong."));
-        // console.log(err)
+        } 
+      } catch (err) { 
+        console.log(err)
+        // eslint-disable-next-line 
+        if (err.code){
+        dispatch(connectFailed("Adding the POLYGON MATIC network to Metamask..."));
+        const chId = Web3.utils.toHex("137");
+        web3.currentProvider.request({
+          method: 'wallet_addEthereumChain',
+          params: [{
+            chainId: `${chId}`,
+            chainName: 'Polygon Mainnet',
+            nativeCurrency: {
+              name: "MATIC",
+              symbol: "MATIC",
+              decimals: 18
+            },
+            rpcUrls: [
+              "https://polygon-rpc.com/",
+              "https://rpc-mainnet.matic.network",
+              "https://matic-mainnet.chainstacklabs.com",
+              "https://rpc-mainnet.maticvigil.com",
+              "https://rpc-mainnet.matic.quiknode.pro",
+              "https://matic-mainnet-full-rpc.bwarelabs.com",
+              "https://polygon-bor.publicnode.com"
+            ],
+            blockExplorerUrls: ['https://polygonscan.com']
+          }]
+        }).then(async() => {
+          const accounts = await ethereum.request({
+            method: "eth_requestAccounts",
+          });
+            const SmartContractObj = new Web3EthContract(
+              abi,
+              CONFIG.CONTRACT_ADDRESS
+            );
+            dispatch(
+              connectSuccess({
+                account: accounts[0],
+                smartContract: SmartContractObj,
+                web3: web3,
+              })
+            );
+            // Add listeners start
+            ethereum.on("accountsChanged", (accounts) => {
+              dispatch(updateAccount(accounts[0]));
+            })
+        })
+        .catch((error) => {
+          console.log(error)
+        }) 
+      } else {
+        dispatch(connectFailed(`${err.message}`));
+      }
       }
     } else {
       dispatch(connectFailed("Install the Metamask browser extension or use the Metamask app browser."));
