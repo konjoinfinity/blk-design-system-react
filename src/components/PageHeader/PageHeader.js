@@ -18,7 +18,6 @@
 
 import React, { useEffect, useState, Suspense } from "react";
 import { Button, Container, Row, Col, Alert } from "reactstrap";
-
 import { useDispatch, useSelector } from "react-redux";
 import { connect } from "./redux/blockchain/blockchainActions";
 import { fetchData } from "./redux/data/dataActions";
@@ -27,7 +26,6 @@ import AddIcon from "@mui/icons-material/Add";
 import Contract from "web3-eth-contract";
 import Web3 from "web3";
 import { ethers } from "ethers";
-
 
 const { ethereum } = window;
 Contract.setProvider(ethereum);
@@ -38,7 +36,6 @@ if (window.ethereum && window.ethereum.isMetaMask) {
 }
 
 let txreceipt = "";
-let lastBaseFeePerGas = 0;
 
 export default function PageHeader() {
   const [visible, setVisible] = useState(true);
@@ -85,9 +82,7 @@ export default function PageHeader() {
       cost = CONFIG.WEI_COST;
       contractAddress = CONFIG.CONTRACT_ADDRESS;
     }
-    let gasLimit = lastBaseFeePerGas;
     let totalCostWei = String(cost * mintAmount);
-    let totalGasLimit = String(gasLimit);
     setClaimingNFT(true);
     setFeedback(`Minting your ${CONFIG.NFT_NAME}...`);
     const abiResponse = await fetch("/config/abi.json", {
@@ -104,8 +99,9 @@ export default function PageHeader() {
           from: blockchain.account,
           to: contractAddress,
           data: contract.methods.mint(mintAmount).encodeABI(),
-          gasLimit: String(totalGasLimit),
-          value: totalCostWei,
+          maxPriorityFeePerGas: null,
+          maxFeePerGas: null, 
+          value: totalCostWei
         })
         .once("error", (err) => {
           if (visible === false) {
@@ -163,18 +159,6 @@ export default function PageHeader() {
 
   useEffect(() => {
     getConfig();
-    async function getFee() {
-      if (window.ethereum && window.ethereum.isMetaMask) {
-        let feeData = await provider.getFeeData();
-        lastBaseFeePerGas = Number(
-          String(web3.utils.toNumber(feeData.lastBaseFeePerGas._hex)).slice(
-            0,
-            -4
-          )
-        );
-      }
-    }
-    getFee();
   }, []);
 
   useEffect(() => {
