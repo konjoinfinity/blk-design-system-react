@@ -26,6 +26,7 @@ import AddIcon from "@mui/icons-material/Add";
 import Contract from "web3-eth-contract";
 import Web3 from "web3";
 import { ethers } from "ethers";
+import "./Load.css"
 
 const { ethereum } = window;
 Contract.setProvider(ethereum);
@@ -39,6 +40,7 @@ let txreceipt = "";
 
 export default function PageHeader() {
   const [visible, setVisible] = useState(true);
+  const [showLoader, setshowLoader] = useState(false);
   const dispatch = useDispatch();
   const blockchain = useSelector((state) => state.blockchain);
   const data = useSelector((state) => state.data);
@@ -260,7 +262,17 @@ export default function PageHeader() {
                                 </Alert>
                               </>
                             ) : null}
-        
+                            
+                            <Alert color="info">
+                              <div className="cirbox">
+                              <div className="cirloader">
+                                <svg className="circircular" viewBox="25 25 50 50">
+                                  <circle className="cirpath" cx="50" cy="50" r="20" fill="none" strokeWidth="4" strokeMiterlimit="10"/>
+                                </svg>
+                              </div>
+                            </div>
+                            </Alert>
+              
                             <br />
                             <Button
                               variant="contained"
@@ -268,6 +280,7 @@ export default function PageHeader() {
                               size="large"
                               onClick={(e) => {
                                 e.preventDefault();
+                                setshowLoader(true)
                                 dispatch(connect(false));
                                 getData();
                                 setShowPixelmint(false);
